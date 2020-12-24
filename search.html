@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./static/css/style.css">
+		<link rel="stylesheet" media="(max-width: 1200px)" href="./static/css/style_1200.css"/>
+		<link rel="stylesheet" media="(max-width: 768px)" href="./static/css/style_768.css"/>
+		<link rel="icon" type="image/png" href="./static/ico/logo.svg">
+		<title>UManga</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<a href="" id="logo"><img src="./static/ico/logo.svg"></a>
+				<form class="search" id="search-m" method="post">
+					<input type="text" width="pixels" placeholder="Пошук...">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<input type="checkbox" id="menu-checkbox">
+				<label for="menu-checkbox" id="menu_button">
+					<div></div>
+				</label>
+				<nav id="menu">
+					<a href="" class="button"><span>Каталог</span></a>
+					<a href="" class="button"><span>Рейтинг манги</span></a>
+					<a href="" class="button"><span>Наші друзі</span></a>
+					<a href="" class="button"><span>Рейтинг манги</span></a>
+					<a href="" class="button"><span>Наші друзі</span></a>
+					<form class="search" id="search-d" method="post">
+						<input type="text" width="pixels" placeholder="Пошук...">
+						<button type="submit"><img src="./static/ico/lupa.svg"></button>
+					</form>
+					<a href="" class="button"><span>Вхід</span></a>
+				</nav>
+			</div>
+		</header>
+	</body>
+	<div class="wrap">
+		<div id="search-page">
+			<div class="block">
+				<div class="block_title">Мальописи</div>
+				<div id="search-page_list">
+					<a class="manga-poster" href="">
+						<img src="./static/img/1.jpg">
+						<div>Воїн скелет не зміг захистити підземелля</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/2.jpg">
+						<div>Меч що розсікає демонів</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/3.jpg">
+						<div>Обіцяний неверленд</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/4.jpg">
+						<div>Великий із бродячих псів</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/5.jpg">
+						<div>Наруто</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/6.jpg">
+						<div>Кайдзю номер 8</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/1.jpg">
+						<div>Воїн скелет не зміг захистити підземелля</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/2.jpg">
+						<div>Меч що розсікає демонів</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/3.jpg">
+						<div>Обіцяний неверленд</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/4.jpg">
+						<div>Великий із бродячих псів</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/5.jpg">
+						<div>Наруто</div>
+					</a>
+					<a class="manga-poster" href="">
+						<img src="./static/img/6.jpg">
+						<div>Кайдзю номер 8</div>
+					</a>
+				</div>
+			</div>
+			<div id="search-page_filter" class="block">
+				<input type="checkbox" id="filter-checkbox" class="drop-down_checkbox">
+				<label for="filter-checkbox" class="block_title" id="filter-button">
+					<span class="drop-down drop-down_desktop-none">Фільтр</span>
+				</label>
+				<div id="filter"></div>
+			</div>
+		</div>
+	</div>
+</html>

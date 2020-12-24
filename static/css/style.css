@@ -1,0 +1,633 @@
+/* Обнулення */
+*,*:before,*:after{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html{height: 100%;}
+html,body{
+	min-height: 100%;
+	width: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited, a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+@font-face{
+	font-family: Exo;
+	src: url(Exo.ttf);
+}
+:root{
+	--page-color: #e0e0e0;
+	--light-color: #ffffff;
+	--op-light-color: #ffffffd0;
+	--main-color: #383736;
+	--op-main-color: #373635d0;
+	--selection-main:  #4d4b4b;
+	--light-main-color: #d6d6d6;
+	--selection-color:  #dd6241;
+	--main-font-color: #ffca22;
+	--main-font: 16px Exo;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	background-color: var(--page-color);
+	font: var(--main-font);
+	color: var(--main-color);
+	overflow-y: scroll;
+}
+a{
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	text-align: center;
+	font: var(--main-font);
+	color: var(--main-color);
+	width: 100%;
+	height: 100%;
+}
+a:hover{opacity: 0.85;}
+img{
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+input{padding-left: 5px;}
+header,
+footer{
+	width: 100%;
+	min-width: 200px;
+	background-color: var(--main-color);
+	z-index: 100;
+}
+header{
+	position: fixed;
+	background-color: var(--main-color);
+    top: 0;
+    left: 0;
+	min-height: 51px;
+	border-bottom: 5px solid var(--selection-color);
+}
+footer{
+	margin-top: auto;
+	width: 100%;
+	background-color: var(--main-color);
+}
+header > div,
+footer > div{
+	align-items: center;
+	max-width: 1200px;
+	height: inherit;
+	display: flex;
+	margin: 0 auto;
+}
+header > div {
+	align-items: center;
+	width: 1200px;
+	display: flex;
+	margin: auto;
+}
+/* Загальне */
+#menu-checkbox,
+#reader_chapters-checkbox{display: none;}
+.wrap{
+	max-width: 1200px;
+	min-width: 200px;
+	margin: 0 auto;
+	margin-top: 71px;
+}
+/* Загальна кнопка */
+.button{
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	font: var(--main-font);
+	background-color: var(--main-color);
+	cursor: pointer;
+}
+.button,
+.button > a{
+	text-align: center;
+	color: var(--light-color);
+	-webkit-transition: 0.4s ease;
+	-moz-transition: 0.4s ease;
+	transition: 0.4s ease;
+	-webkit-transition-property: color, background-color;
+	-moz-transition-property: color, background-color;
+	transition-property: color, background-color;
+}
+.button:hover,
+.button:hover > a{
+	color: var(--main-color);
+	background-color: var(--selection-color);
+	opacity: 1;
+}
+/* Загальні блоки */
+.block{background-color: var(--light-color);}
+.opacity-block{background-color: var(--op-light-color);}
+.block_title{
+	text-align: center;
+	color: var(--light-color);
+	font-size: 20px;
+	background-color: var(--main-color);
+	min-height: 45px;
+	border-bottom: 5px solid var(--selection-color);
+	padding: 8px 0;
+	cursor: default;
+}
+/* Постер */
+.manga-poster > div{
+	position: absolute;
+	color: var(--light-color);
+	font-size: 18px;
+	text-align: center;
+	margin-top: auto;
+	width: 100%;
+	min-height: 50px;
+	max-height: 50px;
+	bottom: 0;
+	background-color: var(--op-main-color);
+	padding: 3px 5px;
+	overflow: hidden;
+}
+.manga-poster:hover > div{max-height: 100%;}
+/* Кнопочка до верху сторінки */
+#go-to-top{
+	position: sticky;
+	padding: 5px 0;
+	bottom: 30px;
+	left: 90%;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	margin-bottom: 10px;
+	background-color: var(--main-color);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	z-index: 99;
+}
+/* Список */
+.border-bottom{border-bottom: 2px solid var(--main-color);}
+/* Пошук */
+.search{
+	display: flex;
+	max-width: 236px;
+	min-width: 236px;
+	height: 28px;
+	margin: auto 10px;
+	overflow: hidden;
+}
+.search input{
+	background-color: var(--page-color);
+	padding-right: 29px;
+	width: 100%;
+}
+.search button{
+	width: 28px;
+	background-color: var(--selection-color);
+	padding: 5px;
+	margin-left: -28px;
+}
+.search button:hover{opacity: 0.85;}
+#search-m{display: none;}
+/* Кнопка випадаючого меню */
+.drop-down{
+	display: flex;
+	align-items: center;
+}
+.drop-down:after{
+	content: '';
+	width: 0;
+	height: 0;
+	border-top: 7px solid var(--light-color);
+	border-right: 7px solid transparent;
+	border-left: 7px solid transparent;
+	margin-left: 7px;
+	margin-top: 6px;
+	-webkit-transition: 0.4s ease;
+	-moz-transition: 0.4s ease;
+	transition: 0.4s ease;
+	-webkit-transition-property: border-top, transform;
+	-moz-transition-property: border-top, transform;
+	transition-property: border-top, transform;
+}
+.drop-down_checkbox ~ label:hover .drop-down:after{border-top: 7px solid var(--main-color);}
+.drop-down_checkbox:checked ~ label > .drop-down:after{
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.drop-down_desktop-none:after{display: none;}
+/* Шапка */
+#logo{
+	display: inline-block;
+	max-width: 40px;
+	min-width: 40px;
+	height: 46px;
+	margin-right: 10px;
+}
+#menu{
+	width: 100%;
+	display: flex;
+}
+#menu form{margin-left: auto;}
+#menu a{
+	min-height: 46px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	width: auto;
+	min-width: 60px;
+	max-height: 46px;
+	line-height: 16px;
+}
+/* Головна сторінка */
+#main-page{
+	display: grid;
+	grid-template-areas: 
+		"popular-manga popular-manga"
+		"new-chapters  new-manga";
+	grid-template-rows: 340px 1fr;
+	grid-template-columns: 1fr 239px;
+	gap: 20px;
+}
+#popular-manga{grid-area: popular-manga;}
+#new-chapters{grid-area: new-chapters;}
+#new-manga{grid-area: new-manga;}
+/* Популярна манга */
+#popular-manga_list{
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	height: 295px;
+	padding-top: 10px;
+}
+#popular-manga_list a{
+	display: inline-block;
+	flex-shrink: 0;
+	width: 190px;
+	height: 285px;
+	margin: 0 6px;
+}
+#popular-manga_list a:first-child{margin-left: 0;}
+#popular-manga_list a:last-child{margin-right: 0;}
+/* Нові глави */
+.chapter-block{
+	display: grid;
+	grid-template-areas: 
+		"cb_img  cb_title"
+		"cb_img  cb_description";
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 100px 1fr;
+	vertical-align: top;
+	float: left;
+	display: grid;
+	gap: 10px;
+	width: 50%;
+	height: 172px;
+	padding: 10px;
+}
+.chapter-block > div a{
+	text-align: start;
+	height: auto;
+	width: auto;
+}
+.cb_img{
+	grid-area: cb_img;
+	height: 150px;
+}
+.cb_img img{height: 150px;}
+.cb_title{
+	grid-area: cb_title;
+	overflow: hidden;
+	height: auto;
+	padding-bottom: 5px;
+	max-height: 55px;
+}
+.cb_title a{font-size: 20px;}
+.cb_description{
+	grid-area: cb_description;
+	overflow: hidden;
+}
+.cb_description > div{
+	margin-top: auto;
+	cursor: default;
+	position: absolute;
+	height: auto;
+	bottom: 0;
+}
+.cb_description > a{font-size: 18px;}
+.cb_description span{
+	font-size: 14px;
+	display: block;
+}
+/* Нова манга */
+#new-manga_list{
+	height: 1032px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+#new-manga_list a{
+	margin-top: 10px;
+	width: 220px;
+	height: 331px;
+}
+/* Манга */
+#manga-page{padding: 25px;}
+#manga-page > *{z-index: 1;}
+#manga-page p{
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+#mp_img{
+	width: 250px;
+	height: auto;
+	float: right;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	z-index: 2;
+}
+#mp_img img{height: 375px;}
+#mp_img .button{
+	margin-top: 10px;
+	height: 34px;
+}
+#mp_img .button > a{
+	display: flex;
+	align-items: center;
+}
+#mp_img .button span{
+	margin: 0 auto;
+	padding-bottom: 3px;
+}
+#mp_title{
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+.mp_description{
+	border-bottom: 1px solid var(--light-main-color);
+	display: grid;
+	grid-template-columns: 140px 1fr;
+	width: auto;
+	cursor: default;
+	padding: 10px 0;
+}
+.mp_description div:last-child a{
+	vertical-align: top;
+	color: var(--op-main-color);
+	width: auto;
+	height: auto;
+	padding: 3px 5px;
+	padding-top: 0;
+}
+.mp_description a:hover,
+#mp_list a:hover,
+#reader_chapters a:hover,
+#active-chapter{background-color: var(--light-main-color);}
+#mp_list{
+	margin-top: 20px;
+	width: 100%;
+	border-bottom: 0;
+	max-height: 400px;
+	min-height: 40px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+#mp_list a{
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	height: 40px;
+	padding: 10px 15px;
+	border-bottom: 1px solid var(--light-main-color);
+}
+#mp_list span:first-child:before,
+#reader_chapters-button span::before,
+#reader_chapters a:before{
+	content: 'Глава';
+	margin-right: 10px;
+}
+/* Читалка */
+#reader_header{
+	position: static;
+	min-width: 200px;
+	height: auto;
+}
+#reader_menu > a{
+	min-height: 46px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	overflow: hidden;
+	max-width: 250px;
+	line-height: 16px;
+	width: auto;
+}
+#reader_menu #logo{
+	grid-area: logo;
+	width: 40px;
+	padding: 0;
+}
+#reader_menu > a:last-child{grid-area: reader_menu-a;}
+#reader_menu > div{grid-area: reader_chapters-button;}
+#reader_back{grid-area: reader_back;}
+#reader_back > span{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#reader_chapters-checkbox:checked ~ #reader_chapters{display: block;}
+#reader_chapters-button{
+	min-height: 46px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+}
+#reader_chapters{
+	display: none;
+	top: 51px;
+	position: absolute;
+	background-color: var(--op-light-color);
+	width: 150px;
+	max-height: 252px;
+	overflow: hidden;
+	overflow-y: scroll;
+	z-index: 100;
+}
+#reader_chapters a{
+	text-align: left;
+	padding: 3px 5px;
+}
+#active-chapter{cursor: default;}
+#active-chapter:hover{opacity: 1;}
+#reader_page{
+	min-width: 200px;
+	width: 100%;
+	margin: 20px 0;
+	margin-bottom: auto;
+}
+#reader_buttons{
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-areas: 
+		"rb_left rb_right rb_right";
+	grid-template-columns: 1fr 810px 1fr;
+	z-index: 2;
+}
+#reader_buttons a:first-child{grid-area: rb_left;}
+#reader_buttons a:first-child:hover{background-color: khaki;}
+#reader_buttons a:last-child{grid-area: rb_right;}
+#reader_buttons a:last-child:hover{background-color: cadetblue;}
+#reader_img{
+	display: flex;
+	margin: 0 auto;
+	max-width: 946px;
+	height: auto;
+	z-index: 1;
+}
+#reader-scroll_img{
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	max-width: 810px;
+	height: auto;
+	z-index: 1;
+}
+#reader_img > img,
+#reader-scroll_img > img{
+	margin: 0 auto;
+	padding-bottom: 20px;
+	width: 810px;
+}
+#reader_img > img,
+#reader-scroll_img > img:last-child{padding-bottom: 0;}
+.reader_img-buttons{
+	height: inherit;
+	display: block;
+	width: 53px;
+	padding-top: 122px;
+	padding-bottom: 250px;
+}
+.reader_img-buttons img{
+	position: sticky;
+	height: 100px;
+	width: inherit;
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+.reader_img-buttons:last-child img{
+	-webkit-transform: rotate(180deg) translate(0, 50%);
+	-moz-transform: rotate(180deg) translate(0, 50%);
+	transform: rotate(180deg) translate(0, 50%);
+}
+@media (max-width: 946px){
+	#reader_img > img,
+	#reader-scroll_img > img{width: 100%;}
+	.reader_img-buttons{display: none;}
+	#reader_buttons{
+		grid-template-areas: 
+			"rb_left rb_right";
+		grid-template-columns: 1fr 2fr;
+	}
+}
+#reader_footer{
+	display: grid;
+	grid-template-areas:
+		"rf_a-left  rf_form  rf_a-right";
+	grid-template-columns: minmax(160px, 258px) auto minmax(160px, 258px);
+	gap: 10px;
+	width: 536px;
+	padding: 20px 5px;
+	margin: 0 auto;
+	height: auto;
+}
+#reader_footer form{
+	grid-area: rf_form;
+	max-width: 186px;
+	min-width: 186px;
+	margin: 0;
+}
+#reader_footer > a{
+	grid-area: rf_a-left;
+	display: flex;
+	align-items: center;
+	color: var(--light-color);
+	background-color: var(--selection-main);
+	width: 100%;
+	height: 28px;
+}
+#reader_footer > a *{
+	margin: 0 5px;
+	height: 20px;
+	width: auto;
+}
+#reader_footer > a span{
+	flex: 1;
+	width: inherit;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#reader_footer > a:last-child{grid-area: rf_a-right;}
+#reader_footer > a:last-child img{transform: rotate(180deg);}
+/* Сторінка пошуку */
+#search-page{
+	display: flex;
+	justify-content: center;
+	width: auto;
+	margin: 0 auto;
+}
+#search-page_list{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 20px 15px;
+}
+#search-page_list > a{
+	display: inline-block;
+	width: 160px;
+	height: 240px;
+	margin: 0 5px 10px;
+}
+#search-page_filter{
+	margin-left: 20px;
+	width: 300px;
+	flex-shrink: 0;
+	height: min-content;
+}
+#filter-checkbox{display: none;}
+#search-page_filter .block_title{
+	display: flex;
+	justify-content: center;
+}
+#filter{height: 400px;}
+@media (max-width: 1200px){#search-page{width: 1030px;}}
+@media (max-width: 1070px){#search-page{width: 860px;}}
+@media (max-width: 894px){#search-page{width: 690px;}}

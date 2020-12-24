@@ -1,0 +1,16 @@
+header > div,
+footer > div,
+.wrap{width: 96vw;}
+#main-page{grid-template-rows: 352px 1fr;}
+#popular-manga_list{
+	height: 312px;
+	width: 96vw;
+	overflow-x: scroll;
+	width: 96vw;
+}
+@media only screen{
+	#new-manga_list a{
+		width: 239px;
+		height: 358px;
+	}
+}
