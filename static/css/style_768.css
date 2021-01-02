@@ -114,7 +114,11 @@ footer > div{width: 100%;}
 }
 #mp_img{width: 200px;}
 #mp_img img{height: 300px;}
-#mp_title{font-size: 34px;}
+#mp_title > span:first-child{
+	font-size: 30px;
+	line-height: 30px;
+}
+#mp_title > span:not(:first-child){font-size: 18px;}
 .mp_description{grid-template-columns: 120px 1fr;}
 #mp_list{padding-right: 12px;}
 @media (max-width: 580px){
@@ -130,6 +134,11 @@ footer > div{width: 100%;}
 }
 @media (max-width: 350px){
 	#manga-page{padding: 10px;}
+	#mp_title > span:first-child{
+		font-size: 24px;
+		line-height: 24px;
+	}
+	#mp_title > span:not(:first-child){font-size: 14px;}
 	#mp_list a{
 		flex-direction: column;
 		height: auto;

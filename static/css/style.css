@@ -355,7 +355,10 @@ header > div {
 	height: 331px;
 }
 /* Манга */
-#manga-page{padding: 25px;}
+#manga-page{
+	padding: 25px;
+	width: 1200px;
+}
 #manga-page > *{z-index: 1;}
 #manga-page p{
 	margin-top: 20px;
@@ -382,9 +385,16 @@ header > div {
 	margin: 0 auto;
 	padding-bottom: 3px;
 }
-#mp_title{
-	font-size: 50px;
-	margin-bottom: 20px;
+#mp_title{margin-bottom: 20px;}
+#mp_title > span{display: block;}
+#mp_title > span:not(:first-child){
+	color: var(--op-main-color);
+	font-size: 20px;
+}
+#mp_title > span:first-child{
+	font-size: 40px;
+	line-height: 40px;
+	margin-bottom: 5px;
 }
 .mp_description{
 	border-bottom: 1px solid var(--light-main-color);
