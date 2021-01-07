@@ -112,7 +112,7 @@ header > div {
 #menu-checkbox,
 #reader_chapters-checkbox{display: none;}
 .wrap{
-	max-width: 1200px;
+	width: 1200px;
 	min-width: 200px;
 	margin: 0 auto;
 	margin-top: 71px;
@@ -355,10 +355,7 @@ header > div {
 	height: 331px;
 }
 /* Манга */
-#manga-page{
-	padding: 25px;
-	width: 1200px;
-}
+#manga-page{padding: 25px;}
 #manga-page > *{z-index: 1;}
 #manga-page p{
 	margin-top: 20px;

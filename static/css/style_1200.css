@@ -1,7 +1,6 @@
 header > div,
 footer > div,
-.wrap,
-#manga-page{width: 96vw;}
+.wrap{width: 96vw;}
 #main-page{grid-template-rows: 352px 1fr;}
 #popular-manga_list{
 	height: 312px;
