@@ -432,12 +432,6 @@ header > div {
 	padding: 10px 15px;
 	border-bottom: 1px solid var(--light-main-color);
 }
-#mp_list span:first-child:before,
-#reader_chapters-button span::before,
-#reader_chapters a:before{
-	content: 'Глава';
-	margin-right: 10px;
-}
 /* Читалка */
 #reader_header{
 	position: static;
