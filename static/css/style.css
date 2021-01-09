@@ -129,6 +129,7 @@ header > div {
 .button,
 .button > a{
 	text-align: center;
+	justify-content: center;
 	color: var(--light-color);
 	-webkit-transition: 0.4s ease;
 	-moz-transition: 0.4s ease;
@@ -139,7 +140,6 @@ header > div {
 }
 .button:hover,
 .button:hover > a{
-	color: var(--main-color);
 	background-color: var(--selection-color);
 	opacity: 1;
 }
@@ -233,7 +233,6 @@ header > div {
 	-moz-transition-property: border-top, transform;
 	transition-property: border-top, transform;
 }
-.drop-down_checkbox ~ label:hover .drop-down:after{border-top: 7px solid var(--main-color);}
 .drop-down_checkbox:checked ~ label > .drop-down:after{
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);

@@ -3,10 +3,7 @@
 	a:hover,
 	img:hover{opacity: 1;}
 	.button:hover,
-	.button:hover > a{
-		color: var(--light-color);
-		background-color: var(--main-color);
-	}
+	.button:hover > a{background-color: var(--main-color);}
 	.manga-poster:hover > div{max-height: 50px;}
 	.search button:hover{opacity: 1;}
 	#reader_chapters a:hover,
