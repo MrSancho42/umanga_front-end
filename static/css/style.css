@@ -638,3 +638,25 @@ header > div {
 @media (max-width: 1200px){#search-page{width: 1030px;}}
 @media (max-width: 1070px){#search-page{width: 860px;}}
 @media (max-width: 894px){#search-page{width: 690px;}}
+
+/* Зміна манги та глав */
+#modify-manga{
+	padding: 25px;
+}
+.mm-block{
+	margin-bottom: 20px;
+}
+.mm-block div{
+	border: 1px solid var(--main-color);
+	margin-top: 5px;
+}
+.mm-block div > *{
+	display: block;
+	width: 100%;
+	min-height: 30px;
+	font-size: 16px;
+}
+.mm-block_textarea{
+	resize: vertical;
+	padding: 5px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./static/css/style.css">
+		<link rel="stylesheet" media="(max-width: 1200px)" href="./static/css/style_1200.css"/>
+		<link rel="stylesheet" media="(max-width: 768px)" href="./static/css/style_768.css"/>
+		<link rel="icon" type="image/png" href="./static/ico/logo.svg">
+		<title>UManga</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<a href="" id="logo"><img src="./static/ico/logo.svg"></a>
+				<form class="search" id="search-m" method="post">
+					<input type="text" width="pixels" placeholder="Пошук...">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<input type="checkbox" id="menu-checkbox">
+				<label for="menu-checkbox" id="menu_button">
+					<div></div>
+				</label>
+				<nav id="menu">
+					<a href="" class="button"><span>Каталог</span></a>
+					<a href="" class="button"><span>Рейтинг манги</span></a>
+					<a href="" class="button"><span>Наші друзі</span></a>
+					<a href="" class="button"><span>Рейтинг манги</span></a>
+					<a href="" class="button"><span>Наші друзі</span></a>
+					<form class="search" id="search-d" method="post">
+						<input type="text" width="pixels" placeholder="Пошук...">
+						<button type="submit"><img src="./static/ico/lupa.svg"></button>
+					</form>
+					<a href="" class="button"><span>Вхід</span></a>
+				</nav>
+			</div>
+		</header>
+		<div class="wrap block">
+			<div class="block_title">Створення нового мальопису</div>
+			<div id="modify-manga">
+				<form action="">
+					<div class="mm-block">
+						<span>Назва мальопису</span>
+						<div><input class="" type="text" width="pixels" required></div>
+					</div>
+					<div class="mm-block">
+						<span>Назва англійською</span>
+						<div><input class="" type="text" width="pixels" required></div>
+					</div>
+					<div class="mm-block">
+						<span>Альтернативна назва</span>
+						<div><input class="" type="text" width="pixels" required></div>
+					</div>
+					<div class="mm-block">
+						<span>Статус мальопису</span>
+						<div>
+							<select class="" name="">
+								<option value="">Онгоїнг</option>
+								<option value="">Закінчений</option>
+								<option value="">Призупинено</option>
+							</select>
+						</div>
+					</div>
+					<div class="mm-block">
+						<span>Рік виходу</span>
+						<div><input class="" type="number" min="1900" max="2021" width="pixels"></div>
+					</div>
+					<div class="mm-block">
+						<span>Опис</span>
+						<div><textarea class="mm-block_textarea" type="text" width="pixels"></textarea></div>
+					</div>
+					<div class="mm-block">
+						<span>Тип мальопису</span>
+						<div>
+							<select class="" name="">
+								<option value="">Онгоїнг</option>
+								<option value="">Закінчений</option>
+								<option value="">Призупинено</option>
+							</select>
+						</div>
+					</div>
+					<div class="mm-block">
+						<span>Жанри</span>
+						<div><input class="" type="text" width="pixels" required></div>
+					</div>
+					<div class="mm-block">
+						<span>Автор</span>
+						<div>
+							<select class="" name="" multiple>
+								<option value="">Онгоїнг</option>
+								<option value="">Закінчений</option>
+								<option value="">Призупинено</option>
+							</select>
+						</div>
+					</div>
+					<button type="submit" class="" id="">
+						<span>Add new title</span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
