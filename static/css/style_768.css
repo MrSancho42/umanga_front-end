@@ -118,6 +118,15 @@ footer > div{width: 100%;}
 #mp_title > span:not(:first-child){font-size: 18px;}
 .mp_description{grid-template-columns: 120px 1fr;}
 #mp_list{padding-right: 12px;}
+.mp_chapter{
+	grid-template: "mp_chapter-title mp_chapter-title"
+					"mp_chapter-team mp_chapter-date";
+	grid-template-columns: auto 80px;
+	grid-template-rows: auto auto;
+	gap: 5px;
+	height: auto;
+	padding: 5px;
+}
 @media (max-width: 580px){
 	.mp_description{
 		grid-template-columns: 1fr;
@@ -136,10 +145,6 @@ footer > div{width: 100%;}
 		line-height: 24px;
 	}
 	#mp_title > span:not(:first-child){font-size: 14px;}
-	#mp_list a{
-		flex-direction: column;
-		height: auto;
-	}
 }
 @media (max-width: 550px){
 	#reader_menu{

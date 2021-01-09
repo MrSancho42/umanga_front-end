@@ -412,7 +412,7 @@ header > div {
 	padding-top: 0;
 }
 .mp_description a:hover,
-#mp_list a:hover,
+.mp_chapter:hover,
 #reader_chapters a:hover,
 #active-chapter{background-color: var(--light-main-color);}
 #mp_list{
@@ -424,13 +424,39 @@ header > div {
 	overflow: hidden;
 	overflow-y: scroll;
 }
-#mp_list a{
-	display: flex;
-	justify-content: space-between;
-	text-align: left;
+.mp_chapter{
+	display: grid;
+	width: 100%;
+	grid-template: "mp_chapter-title mp_chapter-team mp_chapter-date";
+	grid-template-columns: auto min-content min-content;
+	gap: 15px;
 	height: 40px;
 	padding: 10px 15px;
 	border-bottom: 1px solid var(--light-main-color);
+}
+.mp_chapter a{
+	width: auto;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.mp_chapter div{
+	display: flex;
+	overflow: hidden;
+}
+.mp_chapter a:hover{
+	color: var(--selection-color);
+	opacity: 1;
+}
+.mp_chapter-title{grid-area: mp_chapter-title;}
+.mp_chapter-team{
+	grid-area: mp_chapter-team;
+	max-width: 300px;
+}
+.mp_chapter-date{
+	grid-area: mp_chapter-date;
+	font-size: 14px;
+	margin-top: auto;
 }
 /* Читалка */
 #reader_header{
