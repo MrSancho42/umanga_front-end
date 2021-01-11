@@ -529,9 +529,7 @@ header > div {
 	z-index: 2;
 }
 #reader_buttons a:first-child{grid-area: rb_left;}
-#reader_buttons a:first-child:hover{background-color: khaki;}
 #reader_buttons a:last-child{grid-area: rb_right;}
-#reader_buttons a:last-child:hover{background-color: cadetblue;}
 #reader_img{
 	display: flex;
 	margin: 0 auto;
