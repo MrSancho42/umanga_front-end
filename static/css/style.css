@@ -129,6 +129,7 @@ header > div {
 .button,
 .button > a{
 	text-align: center;
+	justify-content: center;
 	color: var(--light-color);
 	-webkit-transition: 0.4s ease;
 	-moz-transition: 0.4s ease;
@@ -139,7 +140,6 @@ header > div {
 }
 .button:hover,
 .button:hover > a{
-	color: var(--main-color);
 	background-color: var(--selection-color);
 	opacity: 1;
 }
@@ -233,7 +233,6 @@ header > div {
 	-moz-transition-property: border-top, transform;
 	transition-property: border-top, transform;
 }
-.drop-down_checkbox ~ label:hover .drop-down:after{border-top: 7px solid var(--main-color);}
 .drop-down_checkbox:checked ~ label > .drop-down:after{
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
@@ -413,7 +412,7 @@ header > div {
 	padding-top: 0;
 }
 .mp_description a:hover,
-#mp_list a:hover,
+.mp_chapter:hover,
 #reader_chapters a:hover,
 #active-chapter{background-color: var(--light-main-color);}
 #mp_list{
@@ -425,19 +424,39 @@ header > div {
 	overflow: hidden;
 	overflow-y: scroll;
 }
-#mp_list a{
-	display: flex;
-	justify-content: space-between;
-	text-align: left;
+.mp_chapter{
+	display: grid;
+	width: 100%;
+	grid-template: "mp_chapter-title mp_chapter-team mp_chapter-date";
+	grid-template-columns: auto min-content min-content;
+	gap: 15px;
 	height: 40px;
 	padding: 10px 15px;
 	border-bottom: 1px solid var(--light-main-color);
 }
-#mp_list span:first-child:before,
-#reader_chapters-button span::before,
-#reader_chapters a:before{
-	content: 'Глава';
-	margin-right: 10px;
+.mp_chapter a{
+	width: auto;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.mp_chapter div{
+	display: flex;
+	overflow: hidden;
+}
+.mp_chapter a:hover{
+	color: var(--selection-color);
+	opacity: 1;
+}
+.mp_chapter-title{grid-area: mp_chapter-title;}
+.mp_chapter-team{
+	grid-area: mp_chapter-team;
+	max-width: 300px;
+}
+.mp_chapter-date{
+	grid-area: mp_chapter-date;
+	font-size: 14px;
+	margin-top: auto;
 }
 /* Читалка */
 #reader_header{
@@ -451,7 +470,6 @@ header > div {
 	align-items: center;
 	padding: 0 10px;
 	overflow: hidden;
-	max-width: 250px;
 	line-height: 16px;
 	width: auto;
 }
@@ -462,7 +480,10 @@ header > div {
 }
 #reader_menu > a:last-child{grid-area: reader_menu-a;}
 #reader_menu > div{grid-area: reader_chapters-button;}
-#reader_back{grid-area: reader_back;}
+#reader_back{
+	grid-area: reader_back;
+	max-width: 500px;
+}
 #reader_back > span{
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -510,9 +531,7 @@ header > div {
 	z-index: 2;
 }
 #reader_buttons a:first-child{grid-area: rb_left;}
-#reader_buttons a:first-child:hover{background-color: khaki;}
 #reader_buttons a:last-child{grid-area: rb_right;}
-#reader_buttons a:last-child:hover{background-color: cadetblue;}
 #reader_img{
 	display: flex;
 	margin: 0 auto;
@@ -571,12 +590,15 @@ header > div {
 	display: grid;
 	grid-template-areas:
 		"rf_a-left  rf_form  rf_a-right";
-	grid-template-columns: minmax(160px, 258px) auto minmax(160px, 258px);
+	grid-template-columns: minmax(160px, 278px) auto minmax(160px, 278px);
 	gap: 10px;
-	width: 536px;
+	width: 586px;
 	padding: 20px 5px;
 	margin: 0 auto;
 	height: auto;
+}
+#reader_footer > *{
+	height: 38px;
 }
 #reader_footer form{
 	grid-area: rf_form;
@@ -584,6 +606,11 @@ header > div {
 	min-width: 186px;
 	margin: 0;
 }
+#reader_footer form > button{
+	width: 38px;
+	margin-left: -38px;
+}
+#reader_footer form > input{padding-right: 39px;}
 #reader_footer > a{
 	grid-area: rf_a-left;
 	display: flex;
@@ -591,7 +618,7 @@ header > div {
 	color: var(--light-color);
 	background-color: var(--selection-main);
 	width: 100%;
-	height: 28px;
+	padding: 0 5px;
 }
 #reader_footer > a *{
 	margin: 0 5px;
