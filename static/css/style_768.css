@@ -156,6 +156,7 @@ footer > div{width: 100%;}
 		grid-template-columns: 40px auto auto;
 		grid-template-rows: auto auto;
 	}
+	#reader_menu > a{padding: 0 5px;}
 	#reader_chapters-button > span{width: 100%;}
 	#reader_chapters-button > span:after{margin-left: auto;}
 	#reader_chapters{
