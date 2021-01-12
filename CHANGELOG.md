@@ -1,3 +1,7 @@
+## [v1.1.0 2021-01-12]
+### New
+  - Create a page for adding new manga to the site
+
 ## [v1.0.2 2021-01-11]
 ### Fix
   - Fixed the reader page design
