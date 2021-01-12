@@ -47,6 +47,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	--selection-color:  #dd6241;
 	--main-font-color: #ffca22;
 	--main-font: 16px Exo;
+	--light-green: #3cce7b; 
 }
 body{
 	display: flex;
@@ -641,22 +642,72 @@ header > div {
 
 /* Зміна манги та глав */
 #modify-manga{
-	padding: 25px;
+	padding: 25px 50px;
 }
 .mm-block{
 	margin-bottom: 20px;
 }
-.mm-block div{
+.mm-block > div{
 	border: 1px solid var(--main-color);
 	margin-top: 5px;
 }
-.mm-block div > *{
+.mm-block > div > *{
 	display: block;
 	width: 100%;
 	min-height: 30px;
 	font-size: 16px;
 }
-.mm-block_textarea{
+.mm-block_genres{
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.mm-block_genres *{cursor: pointer;}
+.mm-block_genres label{
+	margin: 0 10px 5px 0;
+	display: flex;
+	align-items: center;
+	padding: 0 5px;
+	width: min-content;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	min-height: 24px;
+}
+.mm-block_genres span{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.mm-block_genres input{
+	appearance: none;
+	border: 1px solid var(--main-color);
+	position: relative;
+	margin-right: 4px;
+	min-width: 16px;
+	height: 16px;
+}
+.mm-block_genres input:checked{
+	background-color: var(--main-color);
+}
+.mm-block_genres input:checked:after{
+	content: '\2143';
+	font-weight: 900;
+	font-size: 14px;
+	position: absolute;
+	top: -3px;
+	left: 3.1px;
+	color: var(--light-color);
+	transform: rotate(45deg);
+}
+#mm-block_textarea{
 	resize: vertical;
 	padding: 5px;
+	min-height: 88px !important;
+}
+#mm-button{
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	height: 40px;
 }
