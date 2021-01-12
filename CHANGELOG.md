@@ -1,3 +1,10 @@
+## [v1.0.2 2021-01-11]
+### Fix
+  - Fixed the reader page design
+  - Changed text color of button when hovering
+  - Changed view of inscription 'Глава' for elements on reader page and manga page
+  - Setting teams as properties of chapters
+
 ## [v1.0.1 2021-01-02]
 ### Add
   - Manga titles in other languages
