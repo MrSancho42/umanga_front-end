@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./static/css/style.css">
+		<link rel="stylesheet" media="(max-width: 1200px)" href="./static/css/style_1200.css"/>
+		<link rel="stylesheet" media="(max-width: 768px)" href="./static/css/style_768.css"/>
+		<link rel="icon" type="image/png" href="./static/ico/logo.svg">
+		<title>UManga</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<a href="" id="logo"><img src="./static/ico/logo.svg"></a>
+				<form class="search" id="search-m" method="post">
+					<input type="text" width="pixels" placeholder="Пошук...">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<input type="checkbox" id="menu-checkbox">
+				<label for="menu-checkbox" id="menu_button">
+					<div></div>
+				</label>
+				<nav id="menu">
+					<a href="" class="button"><span>Каталог</span></a>
+					<a href="" class="button"><span>Рейтинг манги</span></a>
+					<a href="" class="button"><span>Наші друзі</span></a>
+					<a href="" class="button"><span>Рейтинг манги</span></a>
+					<a href="" class="button"><span>Наші друзі</span></a>
+					<form class="search" id="search-d" method="post">
+						<input type="text" width="pixels" placeholder="Пошук...">
+						<button type="submit"><img src="./static/ico/lupa.svg"></button>
+					</form>
+					<a href="" class="button"><span>Вхід</span></a>
+				</nav>
+			</div>
+		</header>
+		<div class="wrap block">
+			<div class="block_title">Редагування опису мальопису</div>
+			<div id="modify-manga">
+				<form action="">
+					<div class="mm-block">
+						<span>Назва мальопису</span>
+						<div><input type="text" width="pixels" value="Неправильна назва" required></div>
+					</div>
+					<div class="mm-block">
+						<span>Назва англійською</span>
+						<div><input type="text" width="pixels" value="Wrong name" required></div>
+					</div>
+					<div class="mm-block">
+						<span>Оригінальна назва</span>
+						<div><input type="text" width="pixels" value="Wrong original name" required></div>
+					</div>
+					<div class="mm-block">
+						<span>Рік виходу</span>
+						<div><input class="" type="number" min="1900" max="2100" width="pixels" value="2001"></div>
+					</div>
+					<div class="mm-block">
+						<span>Статус мальопису</span>
+						<div>
+							<select name="">
+								<option value="">Онгоїнг</option>
+								<option value="">Закінчений</option>
+								<option value="" selected>Призупинено</option>
+							</select>
+						</div>
+					</div>
+					<div class="mm-block">
+						<span>Тип мальопису</span>
+						<div>
+							<select name="">
+								<option value="">Манґа</option>
+								<option value="">Маньхуа</option>
+								<option value="" selected>Манхва</option>
+							</select>
+						</div>
+					</div>
+					<div class="mm-block">
+						<span>Автор</span>
+						<div><input type="text" width="pixels" value="Невірний автор" required></div>
+					</div>
+					<div class="mm-block">
+						<span>Жанри</span>
+						<div class="mm-block_genres">
+							<label for="g1">
+								<input type="checkbox" width="pixels" id="g1" checked>
+								<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque asperiores, nemo cum vitae at et, mollitia porro illum nulla autem tenetur doloribus consequatur voluptates odio eveniet magnam exercitationem harum sit?</span>
+							</label>
+							<label for="g2">
+								<input type="checkbox" width="pixels" id="g2" checked>
+								<span>Бойові мистецтва</span>
+							</label>
+							<label for="g3">
+								<input type="checkbox" width="pixels" id="g3">
+								<span>Бойові мистецтва</span>
+							</label>
+							<label for="g4">
+								<input type="checkbox" width="pixels" id="g4">
+								<span>Бойові мистецтва</span>
+							</label>
+							<label for="g5">
+								<input type="checkbox" width="pixels" id="g5">
+								<span>Бойові мистецтва</span>
+							</label>
+							<label for="g6">
+								<input type="checkbox" width="pixels" id="g6">
+								<span>Бойові мистецтва</span>
+							</label>
+							<label for="g7">
+								<input type="checkbox" width="pixels" id="g7">
+								<span>Бойові мистецтва</span>
+							</label>
+							<label for="g8">
+								<input type="checkbox" width="pixels" id="g8" checked>
+								<span>Бойові мистецтва</span>
+							</label>
+							<label for="g9">
+								<input type="checkbox" width="pixels" id="g9">
+								<span>Бойові мистецтва</span>
+							</label>
+							<label for="g10">
+								<input type="checkbox" width="pixels" id="g10" checked>
+								<span>Бойові мистецтва</span>
+							</label>
+						</div>
+					</div>
+					<div class="mm-block">
+						<span>Опис</span>
+						<div>
+							<textarea id="mm-block_textarea" type="text" width="pixels">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, qui ipsum laudantium dolore nulla voluptate sed cumque aperiam est et beatae accusamus, provident architecto officiis ab dignissimos aliquid excepturi illo.</textarea>
+						</div>
+					</div>
+					<div class="mm-block">
+						<span>Обрати обкладинку</span>
+						<input type="file" id="mm-block_file">
+					</div>
+					<button type="submit" class="button" id="mm-button">
+						<span>Зберегти зміни</span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
