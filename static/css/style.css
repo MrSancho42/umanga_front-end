@@ -46,8 +46,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	--light-main-color: #d6d6d6;
 	--selection-color:  #dd6241;
 	--main-font-color: #ffca22;
+	--light-green-color: #3cce7b;
+	--dark-green-color: #309c5f;
 	--main-font: 16px Exo;
-	--light-green: #3cce7b; 
 }
 body{
 	display: flex;
@@ -144,6 +145,9 @@ header > div {
 	background-color: var(--selection-color);
 	opacity: 1;
 }
+.button-green{background-color: var(--light-green-color);}
+.button-green:hover,
+.button-green:hover > a{background-color: var(--dark-green-color)}
 /* Загальні блоки */
 .block{background-color: var(--light-color);}
 .opacity-block{background-color: var(--op-light-color);}
