@@ -736,10 +736,17 @@ header > div {
 	padding: 5px;
 	min-height: 88px !important;
 }
-#mm-button{
-	display: block;
+#mm_buttons{
+	display: flex;
+	height: auto;
+	gap: 15px;
 	margin: 0 auto;
-	max-width: 250px;
-	min-width: 250px;
+	width: min-content;
+}
+#mm_buttons > button{
+	display: block;
+	white-space: nowrap;
+	width: auto;
 	height: 40px;
+	padding: 0 15px;
 }
