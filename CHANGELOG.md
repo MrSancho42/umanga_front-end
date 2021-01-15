@@ -1,6 +1,10 @@
+## [v1.2.0 2021-01-15]
+### New
+  - Created a page for editing manga
+
 ## [v1.1.0 2021-01-12]
 ### New
-  - Create a page for adding new manga to the site
+  - Created a page for adding new manga to the site
 
 ## [v1.0.2 2021-01-11]
 ### Fix
