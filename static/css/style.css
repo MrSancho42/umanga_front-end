@@ -48,6 +48,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	--main-font-color: #ffca22;
 	--light-green-color: #3cce7b;
 	--dark-green-color: #309c5f;
+	--light-red-color: #f05449;
+	--dark-red-color: #ce4a41;
 	--main-font: 16px Exo;
 }
 body{
@@ -148,6 +150,9 @@ header > div {
 .button-green{background-color: var(--light-green-color);}
 .button-green:hover,
 .button-green:hover > a{background-color: var(--dark-green-color)}
+.button-red{background-color: var(--light-red-color);}
+.button-red:hover,
+.button-red:hover > a{background-color: var(--dark-red-color)}
 /* Загальні блоки */
 .block{background-color: var(--light-color);}
 .opacity-block{background-color: var(--op-light-color);}
