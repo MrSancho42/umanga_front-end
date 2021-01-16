@@ -1,3 +1,11 @@
+## [v1.3.0 2021-01-16]
+### New
+  - Created a page for uploading chapters
+  - Created a page for editing chapter
+
+### Fix
+  - Some changes in design
+
 ## [v1.2.0 2021-01-15]
 ### New
   - Created a page for editing manga
