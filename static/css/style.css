@@ -46,8 +46,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	--light-main-color: #d6d6d6;
 	--selection-color:  #dd6241;
 	--main-font-color: #ffca22;
+	--light-green-color: #3cce7b;
+	--dark-green-color: #309c5f;
+	--light-red-color: #f05449;
+	--dark-red-color: #ce4a41;
 	--main-font: 16px Exo;
-	--light-green: #3cce7b; 
 }
 body{
 	display: flex;
@@ -144,6 +147,12 @@ header > div {
 	background-color: var(--selection-color);
 	opacity: 1;
 }
+.button-green{background-color: var(--light-green-color);}
+.button-green:hover,
+.button-green:hover > a{background-color: var(--dark-green-color)}
+.button-red{background-color: var(--light-red-color);}
+.button-red:hover,
+.button-red:hover > a{background-color: var(--dark-red-color)}
 /* Загальні блоки */
 .block{background-color: var(--light-color);}
 .opacity-block{background-color: var(--op-light-color);}
@@ -732,10 +741,17 @@ header > div {
 	padding: 5px;
 	min-height: 88px !important;
 }
-#mm-button{
-	display: block;
+#mm_buttons{
+	display: flex;
+	height: auto;
+	gap: 15px;
 	margin: 0 auto;
-	max-width: 250px;
-	min-width: 250px;
+	width: min-content;
+}
+#mm_buttons > button{
+	display: block;
+	white-space: nowrap;
+	width: auto;
 	height: 40px;
+	padding: 0 15px;
 }

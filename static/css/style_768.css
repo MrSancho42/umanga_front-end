@@ -243,6 +243,6 @@ footer > div{width: 100%;}
 	padding-left: 0;
 	width: 100%;
 }
-#mm-button{
-	min-width: 180px;
+#mm_buttons{
+	flex-direction: column;
 }

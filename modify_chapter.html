@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./static/css/style.css">
+		<link rel="stylesheet" media="(max-width: 1200px)" href="./static/css/style_1200.css"/>
+		<link rel="stylesheet" media="(max-width: 768px)" href="./static/css/style_768.css"/>
+		<link rel="icon" type="image/png" href="./static/ico/logo.svg">
+		<title>UManga</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<a href="" id="logo"><img src="./static/ico/logo.svg"></a>
+				<form class="search" id="search-m" method="post">
+					<input type="text" width="pixels" placeholder="Пошук...">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<input type="checkbox" id="menu-checkbox">
+				<label for="menu-checkbox" id="menu_button">
+					<div></div>
+				</label>
+				<nav id="menu">
+					<a href="" class="button"><span>Каталог</span></a>
+					<a href="" class="button"><span>Рейтинг манги</span></a>
+					<a href="" class="button"><span>Наші друзі</span></a>
+					<a href="" class="button"><span>Рейтинг манги</span></a>
+					<a href="" class="button"><span>Наші друзі</span></a>
+					<form class="search" id="search-d" method="post">
+						<input type="text" width="pixels" placeholder="Пошук...">
+						<button type="submit"><img src="./static/ico/lupa.svg"></button>
+					</form>
+					<a href="" class="button"><span>Вхід</span></a>
+				</nav>
+			</div>
+		</header>
+		<div class="wrap block">
+			<div class="block_title">Воїн скелет не зміг захистити підземелля</div>
+			<div id="modify-manga">
+				<form action="">
+					<div class="mm-block">
+						<span>Назва глави</span>
+						<div><input type="text" width="pixels" value="Неправильна назва" required></div>
+					</div>
+					<div class="mm-block">
+						<span>Номер глави</span>
+						<div><input class="" type="number" min="1" width="pixels" value="42"></div>
+					</div>
+					<div class="mm-block">
+						<span>Zip архів з мальописом</span>
+						<input type="file" id="mm-block_file">
+					</div>
+					<div id="mm_buttons">
+						<button type="submit" class="button button-green">
+							<span>Зберегти зміни</span>
+						</button>
+						<button type="submit" class="button button-red">
+							<span>Видалити главу</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
