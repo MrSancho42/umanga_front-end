@@ -112,6 +112,7 @@ header > div {
 	display: flex;
 	margin: auto;
 }
+span{height: min-content;}
 /* Загальне */
 #menu-checkbox,
 #reader_chapters-checkbox{display: none;}
@@ -167,7 +168,14 @@ header > div {
 	border-bottom: 5px solid var(--selection-color);
 	cursor: default;
 }
-.block_title > span{margin: 0 auto;}
+.block_title span{margin: 0 auto;}
+.block_title > a{
+	display: flex;
+	align-items: center;
+	color: inherit;
+	font-size: inherit;
+	min-height: 40px;
+}
 /* Постер */
 .manga-poster > div{
 	position: absolute;
