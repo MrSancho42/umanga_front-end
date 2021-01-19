@@ -121,12 +121,12 @@ footer > div{width: 100%;}
 .mp_chapter{
 	grid-template: "mp_chapter-title mp_chapter-title"
 					"mp_chapter-team mp_chapter-date";
-	grid-template-columns: auto 80px;
-	grid-template-rows: auto auto;
-	gap: 5px;
+	grid-template-columns: auto minmax(20px, 100px);
 	height: auto;
-	padding: 5px;
+	grid-template-rows: auto auto;
 }
+.mp_chapter a,
+.mp_chapter div{height: 30px;}
 @media (max-width: 580px){
 	.mp_description{
 		grid-template-columns: 1fr;
