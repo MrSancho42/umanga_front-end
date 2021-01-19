@@ -86,7 +86,6 @@ footer{
 	z-index: 100;
 }
 header{
-	position: fixed;
 	background-color: var(--main-color);
     top: 0;
     left: 0;
@@ -112,6 +111,7 @@ header > div {
 	display: flex;
 	margin: auto;
 }
+span{height: min-content;}
 /* Загальне */
 #menu-checkbox,
 #reader_chapters-checkbox{display: none;}
@@ -119,7 +119,7 @@ header > div {
 	width: 1200px;
 	min-width: 200px;
 	margin: 0 auto;
-	margin-top: 71px;
+	margin-top: 20px;
 }
 /* Загальна кнопка */
 .button{
@@ -157,14 +157,23 @@ header > div {
 .block{background-color: var(--light-color);}
 .opacity-block{background-color: var(--op-light-color);}
 .block_title{
+	display: flex;
+	align-items: center;
 	text-align: center;
 	color: var(--light-color);
 	font-size: 20px;
 	background-color: var(--main-color);
 	min-height: 45px;
 	border-bottom: 5px solid var(--selection-color);
-	padding: 8px 0;
 	cursor: default;
+}
+.block_title span{margin: 0 auto;}
+.block_title > a{
+	display: flex;
+	align-items: center;
+	color: inherit;
+	font-size: inherit;
+	min-height: 40px;
 }
 /* Постер */
 .manga-poster > div{
@@ -419,7 +428,6 @@ header > div {
 	padding-top: 0;
 }
 .mp_description a:hover,
-.mp_chapter:hover,
 #reader_chapters a:hover,
 #active-chapter{background-color: var(--light-main-color);}
 #mp_list{
@@ -436,24 +444,30 @@ header > div {
 	width: 100%;
 	grid-template: "mp_chapter-title mp_chapter-team mp_chapter-date";
 	grid-template-columns: auto min-content min-content;
-	gap: 15px;
 	height: 40px;
-	padding: 10px 15px;
 	border-bottom: 1px solid var(--light-main-color);
 }
-.mp_chapter a{
-	width: auto;
+.mp_chapter a,
+.mp_chapter div{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+.mp_chapter a{padding: 0 10px;}
+.mp_chapter a:hover{
+	padding-top: 4px;
+	border-bottom: 4px solid var(--selection-color);
+	color: var(--selection-color);
+	opacity: 1;
+}
+.mp_chapter span{
+	width: 100%;
+	text-align: start;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-}
-.mp_chapter div{
-	display: flex;
-	overflow: hidden;
-}
-.mp_chapter a:hover{
-	color: var(--selection-color);
-	opacity: 1;
 }
 .mp_chapter-title{grid-area: mp_chapter-title;}
 .mp_chapter-team{
@@ -463,7 +477,8 @@ header > div {
 .mp_chapter-date{
 	grid-area: mp_chapter-date;
 	font-size: 14px;
-	margin-top: auto;
+	padding: 0 10px;
+	cursor: default;
 }
 /* Читалка */
 #reader_header{
