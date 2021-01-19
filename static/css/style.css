@@ -132,8 +132,10 @@ span{height: min-content;}
 }
 .button,
 .button > a{
+	display: flex;
 	text-align: center;
 	justify-content: center;
+	align-items: center;
 	color: var(--light-color);
 	-webkit-transition: 0.4s ease;
 	-moz-transition: 0.4s ease;
@@ -160,6 +162,7 @@ span{height: min-content;}
 	display: flex;
 	align-items: center;
 	text-align: center;
+	justify-content: center;
 	color: var(--light-color);
 	font-size: 20px;
 	background-color: var(--main-color);
@@ -167,10 +170,10 @@ span{height: min-content;}
 	border-bottom: 5px solid var(--selection-color);
 	cursor: default;
 }
-.block_title span{margin: 0 auto;}
 .block_title > a{
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	color: inherit;
 	font-size: inherit;
 	min-height: 40px;
@@ -273,8 +276,6 @@ span{height: min-content;}
 #menu form{margin-left: auto;}
 #menu a{
 	min-height: 46px;
-	display: flex;
-	align-items: center;
 	padding: 0 10px;
 	width: auto;
 	min-width: 60px;
@@ -392,14 +393,6 @@ span{height: min-content;}
 	margin-top: 10px;
 	height: 34px;
 }
-#mp_img .button > a{
-	display: flex;
-	align-items: center;
-}
-#mp_img .button span{
-	margin: 0 auto;
-	padding-bottom: 3px;
-}
 #mp_title{margin-bottom: 20px;}
 #mp_title > span{display: block;}
 #mp_title > span:not(:first-child){
@@ -488,8 +481,6 @@ span{height: min-content;}
 }
 #reader_menu > a{
 	min-height: 46px;
-	display: flex;
-	align-items: center;
 	padding: 0 10px;
 	overflow: hidden;
 	line-height: 16px;
@@ -514,8 +505,6 @@ span{height: min-content;}
 #reader_chapters-checkbox:checked ~ #reader_chapters{display: block;}
 #reader_chapters-button{
 	min-height: 46px;
-	display: flex;
-	align-items: center;
 	padding: 0 10px;
 }
 #reader_chapters{
@@ -682,10 +671,6 @@ span{height: min-content;}
 	height: min-content;
 }
 #filter-checkbox{display: none;}
-#search-page_filter .block_title{
-	display: flex;
-	justify-content: center;
-}
 #filter{height: 400px;}
 @media (max-width: 1200px){#search-page{width: 1030px;}}
 @media (max-width: 1070px){#search-page{width: 860px;}}
