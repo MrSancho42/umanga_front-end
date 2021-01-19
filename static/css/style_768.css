@@ -14,7 +14,7 @@
 
 header > div,
 footer > div{width: 100%;}
-.wrap{margin-top: 61px;}
+.wrap{margin-top: 10px;}
 .drop-down_desktop-none:after{display: block;}
 #menu{
 	flex-direction: column;

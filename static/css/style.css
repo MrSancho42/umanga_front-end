@@ -86,7 +86,6 @@ footer{
 	z-index: 100;
 }
 header{
-	position: fixed;
 	background-color: var(--main-color);
     top: 0;
     left: 0;
@@ -120,7 +119,7 @@ span{height: min-content;}
 	width: 1200px;
 	min-width: 200px;
 	margin: 0 auto;
-	margin-top: 71px;
+	margin-top: 20px;
 }
 /* Загальна кнопка */
 .button{
