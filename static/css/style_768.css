@@ -199,9 +199,6 @@ footer > div{width: 100%;}
 	width: 100%;
 }
 #search-page_filter .block_title{
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	background-color: var(--selection-color);
 	border: 0;
 }
@@ -211,7 +208,7 @@ footer > div{width: 100%;}
 	justify-content: center;
 }
 #filter{height: 0;}
-#filter-button{display: flex;}
+#filter-button{cursor: pointer;}
 #filter-checkbox:checked ~ #filter{height: 400px;}
 @media (max-width: 542px){#search-page{width: 350px;}}
 @media (max-width: 365px){
