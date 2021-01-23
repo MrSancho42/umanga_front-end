@@ -135,8 +135,23 @@ footer > div{width: 100%;}
 	.mp_description div:last-child{margin-left: -5px;}
 }
 @media (max-width: 480px){
-	#mp_img{width: 100%;}
+	#mp_img{
+		width: 100%;
+		margin: 0;
+	}
 	#mp_img img{height: auto;}
+	#mp_info{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	#mp_buttons{
+		flex-direction: column;
+		height: auto;
+		order: -1;
+		margin: 10px 0;
+	}
+	#mp_buttons a {min-height: 39px;}
 }
 @media (max-width: 350px){
 	#manga-page{padding: 10px;}
