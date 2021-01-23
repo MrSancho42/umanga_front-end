@@ -456,10 +456,10 @@ span{height: min-content;}
 #mp_status,
 #mp_buttons a:hover{
 	padding-top: 4px;
-	border-bottom: 4px solid var(--main-color);
+	border-bottom: 4px solid var(--light-green-color);
 	opacity: 1;
 }
-#mp_buttons a:hover{border-bottom: 4px solid var(--light-green-color);}
+#mp_buttons a:hover{border-bottom: 4px solid var(--selection-color);}
 #mp_list{
 	margin-top: 20px;
 	width: 100%;
@@ -489,7 +489,6 @@ span{height: min-content;}
 .mp_chapter a:hover{
 	padding-top: 4px;
 	border-bottom: 4px solid var(--selection-color);
-	color: var(--selection-color);
 	opacity: 1;
 }
 .mp_chapter span{
