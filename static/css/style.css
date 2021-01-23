@@ -389,9 +389,24 @@ span{height: min-content;}
 	z-index: 2;
 }
 #mp_img img{height: 375px;}
-#mp_img .button{
+#mp_img > a:last-child{
+	height: 40px;
 	margin-top: 10px;
-	height: 34px;
+}
+.mp_img-button{
+	display: flex;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	overflow: hidden;
+	opacity: 0.5;
+}
+.mp_img-button:hover{
+	opacity: 1;
+	transition: 0.4s ease;
 }
 #mp_title{margin-bottom: 20px;}
 #mp_title > span{display: block;}
@@ -423,6 +438,28 @@ span{height: min-content;}
 .mp_description a:hover,
 #reader_chapters a:hover,
 #active-chapter{background-color: var(--light-main-color);}
+#mp_buttons{
+	display: flex;
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid var(--light-main-color);
+	border-bottom: 1px solid var(--light-main-color);
+}
+#mp_buttons a{
+	flex: 1;
+	height: 39px;
+	margin: 0 -1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#mp_status,
+#mp_buttons a:hover{
+	padding-top: 4px;
+	border-bottom: 4px solid var(--main-color);
+	opacity: 1;
+}
+#mp_buttons a:hover{border-bottom: 4px solid var(--light-green-color);}
 #mp_list{
 	margin-top: 20px;
 	width: 100%;
