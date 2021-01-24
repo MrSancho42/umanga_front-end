@@ -723,7 +723,7 @@ span{height: min-content;}
 	margin-bottom: 20px;
 }
 .mm-block > div{
-	border: 1px solid var(--main-color);
+	border: 1px solid var(--light-main-color);
 	margin-top: 5px;
 }
 .mm-block > div > *{
