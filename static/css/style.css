@@ -430,20 +430,24 @@ span{height: min-content;}
 .mp_description{
 	border-bottom: 1px solid var(--light-main-color);
 	display: grid;
+	align-items: center;
 	grid-template-columns: 140px 1fr;
 	width: auto;
+	height: 40px;
+	padding: 0 10px;
 	cursor: default;
-	padding: 10px 0;
 }
 .mp_description div:last-child a{
-	vertical-align: top;
-	color: var(--op-main-color);
+	color: var(--main-color);
 	width: auto;
 	height: auto;
-	padding: 3px 5px;
-	padding-top: 0;
+	padding: 5px 10px;
+	opacity: 0.8;
 }
-.mp_description a:hover,
+.mp_description a:hover{
+	background-color: var(--page-color);
+	opacity: 1 !important;
+}
 #reader_chapters a:hover,
 #active-chapter{background-color: var(--light-main-color);}
 #mp_buttons{

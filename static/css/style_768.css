@@ -133,6 +133,7 @@ footer > div{width: 100%;}
 }
 @media (max-width: 580px){
 	.mp_description{
+		height: auto;
 		grid-template-columns: 1fr;
 		grid-template-rows: 30px auto;
 	}
