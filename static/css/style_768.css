@@ -119,24 +119,45 @@ footer > div{width: 100%;}
 .mp_description{grid-template-columns: 120px 1fr;}
 #mp_list{padding-right: 12px;}
 .mp_chapter{
-	grid-template: "mp_chapter-title mp_chapter-title"
-					"mp_chapter-team mp_chapter-date";
-	grid-template-columns: auto minmax(20px, 100px);
+	grid-template: "mp_chapter-title mp_chapter-title mp_chapter-edit"
+					"mp_chapter-team mp_chapter-date mp_chapter-date";
+	grid-template-columns: auto minmax(20px, 70px) 30px;
 	height: auto;
 	grid-template-rows: auto auto;
 }
 .mp_chapter a,
 .mp_chapter div{height: 30px;}
+.mp_chapter-edit{
+	margin: 0;
+	width: 30px !important;
+}
 @media (max-width: 580px){
 	.mp_description{
+		height: auto;
 		grid-template-columns: 1fr;
 		grid-template-rows: 30px auto;
 	}
 	.mp_description div:last-child{margin-left: -5px;}
 }
 @media (max-width: 480px){
-	#mp_img{width: 100%;}
+	#mp_img{
+		width: 100%;
+		margin: 0;
+	}
 	#mp_img img{height: auto;}
+	#mp_info{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	#mp_status{background-color: var(--light-green-color);}
+	#mp_buttons{
+		flex-direction: column;
+		height: auto;
+		order: -1;
+		margin: 10px 0;
+	}
+	#mp_buttons a {min-height: 39px;}
 }
 @media (max-width: 350px){
 	#manga-page{padding: 10px;}
