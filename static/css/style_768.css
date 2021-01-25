@@ -119,14 +119,18 @@ footer > div{width: 100%;}
 .mp_description{grid-template-columns: 120px 1fr;}
 #mp_list{padding-right: 12px;}
 .mp_chapter{
-	grid-template: "mp_chapter-title mp_chapter-title"
-					"mp_chapter-team mp_chapter-date";
-	grid-template-columns: auto minmax(20px, 100px);
+	grid-template: "mp_chapter-title mp_chapter-title mp_chapter-edit"
+					"mp_chapter-team mp_chapter-date mp_chapter-date";
+	grid-template-columns: auto minmax(20px, 70px) 30px;
 	height: auto;
 	grid-template-rows: auto auto;
 }
 .mp_chapter a,
 .mp_chapter div{height: 30px;}
+.mp_chapter-edit{
+	margin: 0;
+	width: 30px !important;
+}
 @media (max-width: 580px){
 	.mp_description{
 		grid-template-columns: 1fr;
