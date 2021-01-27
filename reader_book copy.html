@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./static/css/style.css">
+		<link rel="stylesheet" media="(max-width: 1200px)" href="./static/css/style_1200.css"/>
+		<link rel="stylesheet" media="(max-width: 768px)" href="./static/css/style_768.css"/>
+		<link rel="icon" type="image/svg" href="./static/ico/logo.svg">
+		<title>UManga</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<a href="" id="logo"><img src="./static/ico/logo.svg"></a>
+				<form class="search" id="search-m" method="post">
+					<input type="text" placeholder="Пошук...">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<input type="checkbox" id="menu-checkbox">
+				<label for="menu-checkbox" id="menu_button">
+					<div></div>
+				</label>
+				<nav id="menu">
+					<a href="" class="button">Каталог</a>
+					<a href="" class="button">Рейтинг манґи</a>
+					<a href="" class="button">Наші друзі</a>
+					<a href="" class="button">Рейтинг манги</a>
+					<a href="" class="button">Наші друзі</a>
+					<form class="search" id="search-d" method="post">
+						<input type="text" placeholder="Пошук...">
+						<button type="submit"><img src="./static/ico/lupa.svg"></button>
+					</form>
+					<a href="" class="button">Вхід</a>
+				</nav>
+			</div>
+		</header>
+		<div class="reader_nav">
+			<div class="rn_back">
+				<a href="">
+					<img src="./static/ico/back-arrow.svg" alt="">
+				</a>
+			</div>
+			<div class="rn_center">
+				<div>
+					<a href="">
+						<img src="./static/ico/arrow-angle.svg" alt="">
+					</a>
+					<a href="">
+						<img src="./static/ico/double-arrow.svg" alt="">
+					</a>
+				</div>
+				<form class="search" id="search-navigation" method="post">
+					<input type="text" placeholder="Сторінка 1 з 90">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<div>
+					<a href="">
+						<img src="./static/ico/arrow-angle.svg" alt="">
+					</a>
+					<a href="">
+						<img src="./static/ico/double-arrow.svg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="rn_chapter-button">
+				<input type="checkbox" id="rn_chapter-checkbox">
+				<label for="rn_chapter-checkbox">
+					<span class="drop-down">Глава 1</span>
+				</label>
+			</div>
+		</div>
+		<div>
+			<div id="reader_wrap">
+				<img src="./static/img/3.jpg">
+			</div>
+			<div id="reader-book_buttons">
+				<a href=""></a>
+				<a href=""></a>
+			</div>
+		</div>
+		<div class="reader_nav"></div>
+	</body>
+</html>
