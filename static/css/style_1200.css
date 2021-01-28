@@ -123,4 +123,6 @@ footer > div,
 	#filter{height: 0;}
 	#filter-button{cursor: pointer;}
 	#filter-checkbox:checked ~ #filter{height: 400px;}
+	
+	.mp_description{grid-template-columns: 100px 1fr;}
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./static/css/style.css">
+		<link rel="stylesheet" media="(max-width: 1200px)" href="./static/css/style_1200.css"/>
+		<link rel="stylesheet" media="(max-width: 576px)" href="./static/css/style_576.css"/>
+		<link rel="icon" type="image/png" href="./static/ico/logo.svg">
+		<title>UManga</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<a href="" id="logo"><img src="./static/ico/logo.svg"></a>
+				<form class="search" id="search-m" method="post">
+					<input type="text" placeholder="Пошук...">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<input type="checkbox" id="menu-checkbox">
+				<label for="menu-checkbox" id="menu_button">
+					<div></div>
+				</label>
+				<nav id="menu">
+					<a href="" class="button">Каталог</a>
+					<a href="" class="button">Рейтинг манги</a>
+					<a href="" class="button">Наші друзі</a>
+					<a href="" class="button">Рейтинг манги</a>
+					<a href="" class="button">Наші друзі</a>
+					<form class="search" id="search-d" method="post">
+						<input type="text" placeholder="Пошук...">
+						<button type="submit"><img src="./static/ico/lupa.svg"></button>
+					</form>
+					<a href="" class="button">Вхід</a>
+				</nav>
+			</div>
+		</header>
+		<div class="wrap block" id="manga-page">
+			<div id="mp_img">
+				<img src="./static/img/1.jpg">
+				<div id="mp_img-buttons">
+					<a href=""><img src="./static/ico/heart.svg"></a>
+				</div>
+				<a href="" class="button">Читати</a>
+			</div>
+			<div id="mp_info">
+				<div id="mp_title">
+					<span>Воїн скелет не зміг захистити підземелля</span>
+					<span>The Skeleton Soldier Failed to Defend the Dungeon</span>
+					<span>Haegolbyeongsaneun Danjon-eul Jikiji Moshaessda</span>
+				</div>
+				<div class="mp_description">
+					<div>Рік випуску</div>
+					<div><a href="">2019</a></div>
+				</div>
+				<div class="mp_description">
+					<div>Жанри</div>
+					<div>
+						<a href="">Романтика</a>
+						<a href="">Пригоди</a>
+						<a href="">Бойові мистецтва</a>
+					</div>
+				</div>
+				<div class="mp_description">
+					<div>Автор</div>
+					<div><a href="">Хаяо Міадзакі</a></div>
+				</div>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					Necessitatibus recusandae ducimus molestiae soluta pariatur, explicabo minus, 
+					laudantium earum dignissimos sapiente accusantium quisquam saepe consectetur fuga 
+					ad porro corrupti possimus minima.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+				</p>
+				<div id="mp_buttons">
+					<a href="">Заплановано</a>
+					<a id="mp_status" href="">Читаю</a>
+					<a href="">Прочитав</a>
+				</div></div>
+			<div id="mp_list">
+				<div class="mp_chapter">
+					<div class="mp_chapter-title"><a href=""><span>Глава 1</span></a></div>
+					<div class="mp_chapter-team"><a href=""><span>Юманго</span></a></div>
+				</div>
+				<div class="mp_chapter">
+					<div class="mp_chapter-title"><a href=""><span>Глава 1</span></a></div>
+					<div class="mp_chapter-team"><a href=""><span>Ми дуже крута команда з дуже довгою назвою щоб нас ніхто не запам'ятав</span></a></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
