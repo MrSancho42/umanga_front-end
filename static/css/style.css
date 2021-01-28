@@ -433,7 +433,7 @@ span{height: min-content;}
 	align-items: center;
 	grid-template-columns: 140px 1fr;
 	width: auto;
-	height: 40px;
+	min-height: 40px;
 	padding: 0 10px;
 	cursor: default;
 }
@@ -523,16 +523,15 @@ span{height: min-content;}
 }
 .mp_chapter-edit{
 	grid-area: mp_chapter-edit;
-	margin: 4px 4px 0 0;
-	max-height: 31px;
-	width: 31px !important;
+	height: inherit;
+	width: 40px !important;
 }
 .mp_chapter-edit a{
-	padding: 5px;
+	padding: 8px;
 	opacity: 0.8;
 }
 .mp_chapter-edit a:hover{
-	padding-top: 5px;
+	padding-top: 8px;
 	border-bottom: 0 !important;
 }
 /* Читалка */

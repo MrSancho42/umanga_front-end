@@ -10,6 +10,11 @@
 	.mp_description a:hover,
 	#mp_list a:hover{background-color: inherit;}
 	.drop-down_checkbox ~ label:hover .drop-down:after{border-top: 7px solid var(--light-color);}
+	#mp_buttons a:hover,
+	.mp_chapter a:hover{
+		padding-top: 0;
+		border-bottom: 0;
+	}
 }
 
 header > div,
@@ -133,6 +138,7 @@ footer > div{width: 100%;}
 }
 @media (max-width: 580px){
 	.mp_description{
+		padding: 8px 0;
 		height: auto;
 		grid-template-columns: 1fr;
 		grid-template-rows: 30px auto;
