@@ -816,3 +816,21 @@ span{height: min-content;}
 	height: 40px;
 	padding: 0 15px;
 }
+
+@media (hover: none){
+	a:hover,
+	img:hover{opacity: 1;}
+	.button:hover,
+	.button:hover > a{background-color: var(--main-color);}
+	.manga-poster:hover > div{max-height: 50px;}
+	.search button:hover{opacity: 1;}
+	#reader_chapters a:hover,
+	.mp_description a:hover,
+	#mp_list a:hover{background-color: inherit;}
+	.drop-down_checkbox ~ label:hover .drop-down:after{border-top: 7px solid var(--light-color);}
+	#mp_buttons a:hover,
+	.mp_chapter a:hover{
+		padding-top: 0;
+		border-bottom: 0;
+	}
+}
