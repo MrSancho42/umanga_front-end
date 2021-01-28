@@ -433,7 +433,7 @@ span{height: min-content;}
 	align-items: center;
 	grid-template-columns: 140px 1fr;
 	width: auto;
-	height: 40px;
+	min-height: 40px;
 	padding: 0 10px;
 	cursor: default;
 }
@@ -523,16 +523,15 @@ span{height: min-content;}
 }
 .mp_chapter-edit{
 	grid-area: mp_chapter-edit;
-	margin: 4px 4px 0 0;
-	max-height: 31px;
-	width: 31px !important;
+	height: inherit;
+	width: 40px !important;
 }
 .mp_chapter-edit a{
-	padding: 5px;
+	padding: 8px;
 	opacity: 0.8;
 }
 .mp_chapter-edit a:hover{
-	padding-top: 5px;
+	padding-top: 8px;
 	border-bottom: 0 !important;
 }
 /* Читалка */
@@ -816,4 +815,22 @@ span{height: min-content;}
 	width: auto;
 	height: 40px;
 	padding: 0 15px;
+}
+
+@media (hover: none){
+	a:hover,
+	img:hover{opacity: 1;}
+	.button:hover,
+	.button:hover > a{background-color: var(--main-color);}
+	.manga-poster:hover > div{max-height: 50px;}
+	.search button:hover{opacity: 1;}
+	#reader_chapters a:hover,
+	.mp_description a:hover,
+	#mp_list a:hover{background-color: inherit;}
+	.drop-down_checkbox ~ label:hover .drop-down:after{border-top: 7px solid var(--light-color);}
+	#mp_buttons a:hover,
+	.mp_chapter a:hover{
+		padding-top: 0;
+		border-bottom: 0;
+	}
 }
