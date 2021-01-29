@@ -26,7 +26,10 @@ footer > div{width: 100%;}
 	flex-direction: column;
 	width: 100%;
 }
-#mp_status{background-color: var(--light-green-color);}
+#mp_status{
+	background-color: var(--light-green-color);
+	color: var(--light-color);
+}
 #mp_buttons{
 	flex-direction: column;
 	height: auto;

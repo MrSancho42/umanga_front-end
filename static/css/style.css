@@ -137,12 +137,6 @@ span{height: min-content;}
 	justify-content: center;
 	align-items: center;
 	color: var(--light-color);
-	-webkit-transition: 0.4s ease;
-	-moz-transition: 0.4s ease;
-	transition: 0.4s ease;
-	-webkit-transition-property: color, background-color;
-	-moz-transition-property: color, background-color;
-	transition-property: color, background-color;
 }
 .button:hover,
 .button:hover > a{
