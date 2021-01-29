@@ -189,21 +189,22 @@ span{height: min-content;}
 }
 .manga-poster:hover > div{max-height: 100%;}
 /* Кнопочка до верху сторінки */
-#go-to-top{
+.page-button{
 	position: sticky;
-	padding: 5px 0;
+	padding: 8px 0;
 	bottom: 30px;
+	border-radius: 50%;
 	left: 90%;
-	width: 40px;
-	height: 40px;
-	margin-top: -20px;
+	width: 44px;
+	height: 44px;
+	margin-top: -22px;
 	margin-bottom: 10px;
 	background-color: var(--main-color);
-	-webkit-transform: rotate(90deg);
-	-moz-transform: rotate(90deg);
-	transform: rotate(90deg);
+	opacity: 0.6;
 	z-index: 99;
 }
+.page-button:hover{opacity: 1;}
+#go-to-top{transform: rotate(90deg);}
 /* Список */
 .border-bottom{border-bottom: 2px solid var(--main-color);}
 /* Пошук */
@@ -615,7 +616,6 @@ span{height: min-content;}
 #reader_img > img,
 #reader-scroll_img > img{
 	margin: 0 auto;
-	padding-bottom: 20px;
 	width: 810px;
 }
 #reader_img > img,
@@ -650,6 +650,10 @@ span{height: min-content;}
 			"rb_left rb_right";
 		grid-template-columns: 1fr 2fr;
 	}
+}
+#reader_switch-mod{
+	left: 10%;
+	transform: translateX(-44px);
 }
 #reader_footer{
 	display: grid;
@@ -825,5 +829,6 @@ span{height: min-content;}
 	.mp_chapter a:hover{
 		padding-top: 0;
 		border-bottom: 0;
-	}
+	}	
+	.page-button:hover{opacity: 0.6;}
 }

@@ -60,6 +60,8 @@ footer > div{width: 100%;}
 	#mp_title > span:not(:first-child){font-size: 14px;}
 }
 
+.page-button{left: 85%;}
+#reader_switch-mod{left: 15%;}
 @media (max-width: 550px){
 	#reader_menu{
 		display: grid;
