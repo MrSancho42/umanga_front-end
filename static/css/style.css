@@ -151,7 +151,6 @@ span{height: min-content;}
 .button-red:hover > a{background-color: var(--dark-red-color)}
 /* Загальні блоки */
 .block{background-color: var(--light-color);}
-.opacity-block{background-color: var(--op-light-color);}
 .block_title{
 	display: flex;
 	align-items: center;
@@ -205,8 +204,6 @@ span{height: min-content;}
 }
 .page-button:hover{opacity: 1;}
 #go-to-top{transform: rotate(90deg);}
-/* Список */
-.border-bottom{border-bottom: 2px solid var(--main-color);}
 /* Пошук */
 .search{
 	display: flex;
@@ -235,25 +232,15 @@ span{height: min-content;}
 	align-items: center;
 }
 .drop-down:after{
-	content: '';
-	width: 0;
-	height: 0;
-	border-top: 7px solid var(--light-color);
-	border-right: 7px solid transparent;
-	border-left: 7px solid transparent;
-	margin-left: 7px;
-	margin-top: 6px;
-	-webkit-transition: 0.4s ease;
-	-moz-transition: 0.4s ease;
-	transition: 0.4s ease;
-	-webkit-transition-property: border-top, transform;
-	-moz-transition-property: border-top, transform;
-	transition-property: border-top, transform;
+	content: url(../ico/down-arrow.svg);
+	width: 15px;
+	height: 15px;
+	margin-left: 4px;
+	
 }
-.drop-down_checkbox:checked ~ label > .drop-down:after{
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
+.drop-down_checkbox:checked ~ .drop-down:after{
 	transform: rotate(180deg);
+	margin-top: 4px;
 }
 .drop-down_desktop-none:after{display: none;}
 /* Шапка */
@@ -283,8 +270,8 @@ span{height: min-content;}
 	grid-template-areas: 
 		"popular-manga popular-manga"
 		"new-chapters  new-manga";
-	grid-template-rows: 340px 1fr;
-	grid-template-columns: 1fr 239px;
+	grid-template-rows: auto auto;
+	grid-template-columns: auto auto;
 	gap: 20px;
 }
 #popular-manga{grid-area: popular-manga;}
@@ -297,16 +284,14 @@ span{height: min-content;}
 	overflow: hidden;
 	height: 295px;
 	padding-top: 10px;
+	gap: 12px;
 }
 #popular-manga_list a{
 	display: inline-block;
 	flex-shrink: 0;
 	width: 190px;
 	height: 285px;
-	margin: 0 6px;
 }
-#popular-manga_list a:first-child{margin-left: 0;}
-#popular-manga_list a:last-child{margin-right: 0;}
 /* Нові глави */
 .chapter-block{
 	display: grid;
@@ -323,6 +308,8 @@ span{height: min-content;}
 	height: 172px;
 	padding: 10px;
 }
+.chapter-block,
+.cb_title{border-bottom: 2px solid var(--main-color);}
 .chapter-block > div a{
 	text-align: start;
 	height: auto;
@@ -359,14 +346,17 @@ span{height: min-content;}
 }
 /* Нова манга */
 #new-manga_list{
+	display: flex;
+	flex-direction: column;
 	height: 1032px;
+	padding: 10px 0 12px;
 	overflow: hidden;
 	overflow-y: scroll;
+	gap: 10px;
 }
 #new-manga_list a{
-	margin-top: 10px;
-	width: 220px;
-	height: 331px;
+	width: 200px;
+	height: 300px;
 }
 /* Манга */
 #manga-page{padding: 25px;}
@@ -561,6 +551,10 @@ span{height: min-content;}
 #reader_chapters-button{
 	min-height: 46px;
 	padding: 0 10px;
+}
+#reader_chapters-button:after{
+	width: 12px;
+	height: 12px;
 }
 #reader_chapters{
 	display: none;
@@ -779,20 +773,13 @@ span{height: min-content;}
 	position: relative;
 	margin-right: 4px;
 	min-width: 16px;
+	max-width: 16px;
 	height: 16px;
+	padding: 1px;
 }
 .mm-block_genres input:checked{
 	background-color: var(--main-color);
-}
-.mm-block_genres input:checked:after{
-	content: '\2143';
-	font-weight: 900;
-	font-size: 14px;
-	position: absolute;
-	top: -3px;
-	left: 3.1px;
-	color: var(--light-color);
-	transform: rotate(45deg);
+	content: url(../ico/checked.svg);
 }
 #mm-block_textarea{
 	resize: vertical;
@@ -824,7 +811,6 @@ span{height: min-content;}
 	#reader_chapters a:hover,
 	.mp_description a:hover,
 	#mp_list a:hover{background-color: inherit;}
-	.drop-down_checkbox ~ label:hover .drop-down:after{border-top: 7px solid var(--light-color);}
 	#mp_buttons a:hover,
 	.mp_chapter a:hover{
 		padding-top: 0;
