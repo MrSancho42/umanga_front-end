@@ -135,3 +135,4 @@ footer > div{width: 100%;}
 #mm_buttons{
 	flex-direction: column;
 }
+.mm_column{flex-direction: column;}

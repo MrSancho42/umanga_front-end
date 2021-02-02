@@ -724,20 +724,29 @@ span{height: min-content;}
 .mm-block{
 	margin-bottom: 20px;
 }
-.mm-block > div{
+.mm-block > select,
+.mm-block > input,
+.mm-block > textarea{
 	border: 1px solid var(--light-main-color);
 	margin-top: 5px;
 }
-.mm-block > div > *{
+.mm-block > *{
 	display: block;
 	width: 100%;
 	min-height: 30px;
 	font-size: 16px;
 }
+.mm_column{
+	display: flex;
+	gap: 10px;
+}
+.mm_column > div{flex-grow: 1;}
 .mm-block_genres{
 	padding: 10px;
 	display: flex;
 	flex-wrap: wrap;
+	border: 1px solid var(--light-main-color);
+	margin-top: 5px;
 }
 .mm-block_genres *{cursor: pointer;}
 .mm-block_genres label{
@@ -775,6 +784,7 @@ span{height: min-content;}
 	padding: 5px;
 	min-height: 88px !important;
 }
+#mm-block_file{border: 0;}
 #mm_buttons{
 	display: flex;
 	height: auto;
