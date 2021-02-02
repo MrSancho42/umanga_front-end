@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./static/css/style.css">
 		<link rel="stylesheet" media="(max-width: 1200px)" href="./static/css/style_1200.css"/>
-		<link rel="stylesheet" media="(max-width: 768px)" href="./static/css/style_768.css"/>
+		<link rel="stylesheet" media="(max-width: 576px)" href="./static/css/style_576.css"/>
 		<link rel="icon" type="image/png" href="./static/ico/logo.svg">
 		<title>UManga</title>
 	</head>
@@ -41,43 +41,41 @@
 				<form action="">
 					<div class="mm-block">
 						<span>Назва мальопису</span>
-						<div><input type="text" required></div>
+						<input type="text" required>
 					</div>
 					<div class="mm-block">
 						<span>Назва англійською</span>
-						<div><input type="text" required></div>
+						<input type="text" required>
 					</div>
 					<div class="mm-block">
 						<span>Оригінальна назва</span>
-						<div><input type="text" required></div>
+						<input type="text" required>
 					</div>
 					<div class="mm-block">
-						<span>Рік виходу</span>
-						<div><input class="" type="number" min="1900" max="2100"></div>
+						<span>Автор</span>
+						<input type="text" required>
 					</div>
-					<div class="mm-block">
-						<span>Статус мальопису</span>
-						<div>
+					<div class="mm_column">
+						<div class="mm-block">
+							<span>Рік виходу</span>
+							<input class="" type="number" min="1900" max="2100">
+						</div>
+						<div class="mm-block">
+							<span>Статус мальопису</span>
 							<select name="">
 								<option value="">Онгоїнг</option>
 								<option value="">Закінчений</option>
 								<option value="">Призупинено</option>
 							</select>
 						</div>
-					</div>
-					<div class="mm-block">
-						<span>Тип мальопису</span>
-						<div>
+						<div class="mm-block">
+							<span>Тип мальопису</span>
 							<select name="">
 								<option value="">Манґа</option>
 								<option value="">Маньхуа</option>
 								<option value="">Манхва</option>
 							</select>
 						</div>
-					</div>
-					<div class="mm-block">
-						<span>Автор</span>
-						<div><input type="text" required></div>
 					</div>
 					<div class="mm-block">
 						<span>Жанри</span>
@@ -126,9 +124,7 @@
 					</div>
 					<div class="mm-block">
 						<span>Опис</span>
-						<div>
-							<textarea id="mm-block_textarea" type="text"></textarea>
-						</div>
+						<textarea id="mm-block_textarea" type="text"></textarea>
 					</div>
 					<div class="mm-block">
 						<span>Обрати обкладинку</span>

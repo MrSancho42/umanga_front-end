@@ -1,0 +1,138 @@
+header > div,
+footer > div{width: 100%;}
+.wrap{margin-top: 10px;}
+.search{min-width: 0;}
+
+.chapter-block{width: 100%;}
+.cb_title{display: flex;}
+.cb_title a{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#mp_img{
+	width: 100%;
+	margin: 0;
+}
+#mp_img img{height: auto;}
+#mp_title > span:first-child{
+	font-size: 30px;
+	line-height: 30px;
+}
+#mp_title > span:not(:first-child){font-size: 18px;}
+#mp_info{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+#mp_status{
+	background-color: var(--light-green-color);
+	color: var(--light-color);
+}
+#mp_buttons{
+	flex-direction: column;
+	height: auto;
+	order: -1;
+	margin: 10px 0;
+}
+#mp_buttons a {min-height: 39px;}
+#mp_list{padding-right: 12px;}
+#mp_list > div{
+	grid-template-columns: 2fr 3fr;
+	gap: 10px;
+}
+#mp_list a{padding: 0;}
+.mp_description{
+	padding: 8px 0;
+	height: auto;
+	grid-template-columns: 1fr;
+	grid-template-rows: 30px auto;
+}
+.mp_description div:last-child{margin-left: -5px;}
+@media (max-width: 350px){
+	#manga-page{padding: 10px;}
+	#mp_title > span:first-child{
+		font-size: 24px;
+		line-height: 24px;
+	}
+	#mp_title > span:not(:first-child){font-size: 14px;}
+}
+
+.page-button{left: 85%;}
+#reader_switch-mod{left: 15%;}
+@media (max-width: 550px){
+	#reader_menu{
+		display: grid;
+		width: 100%;
+		grid-template-areas:
+			"logo reader_back reader_menu-a"
+			"reader_chapters-button reader_chapters-button reader_chapters-button";
+		grid-template-columns: 40px auto auto;
+		grid-template-rows: auto auto;
+	}
+	#reader_menu > a{padding: 0 5px;}
+	#reader_chapters-button:after{margin-left: auto;}
+	#reader_chapters{
+		left: 0;
+		width: 100%;
+		position: absolute;
+		top: 51px;
+	}
+	#reader_footer{
+		width: 100%;
+		max-width: 550px;
+		grid-template-areas:
+			"rf_a-left rf_a-right"
+			"rf_form rf_form";
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+	}
+	#reader_footer form{
+			max-width: 190px;
+			min-width: 190px;
+			margin: 0 auto;
+		}
+	#reader_footer > a{
+		min-width: 90px;
+		max-width: 265px;
+		width: 100%;
+	}
+	#reader_footer > a span{flex: 1;}
+}
+
+@media (max-width: 542px){#search-page{width: 350px;}}
+@media (max-width: 365px){
+	#search-page{width: 270px;}
+	#search-page_list > a{
+		display: inline-block;
+		width: 120px;
+		height: 180px
+	}
+}
+@media (max-width: 282px){
+	#search-page{width: 200px;}
+	#search-page_list{
+		padding: 6px 3px;
+	}
+	#search-page_list > a{
+		margin: 0 3px 6px;
+		display: inline-block;
+		width: 91px;
+		height: 136px
+	}
+}
+
+#modify-manga{
+	padding: 10px;
+}
+#mm-block_file{
+	display: block;
+	margin-top: 5px;
+	padding-left: 0;
+	width: 100%;
+}
+#mm_buttons{
+	flex-direction: column;
+}
+.mm_column{flex-direction: column;}

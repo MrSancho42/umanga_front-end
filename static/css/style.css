@@ -137,12 +137,6 @@ span{height: min-content;}
 	justify-content: center;
 	align-items: center;
 	color: var(--light-color);
-	-webkit-transition: 0.4s ease;
-	-moz-transition: 0.4s ease;
-	transition: 0.4s ease;
-	-webkit-transition-property: color, background-color;
-	-moz-transition-property: color, background-color;
-	transition-property: color, background-color;
 }
 .button:hover,
 .button:hover > a{
@@ -157,7 +151,6 @@ span{height: min-content;}
 .button-red:hover > a{background-color: var(--dark-red-color)}
 /* Загальні блоки */
 .block{background-color: var(--light-color);}
-.opacity-block{background-color: var(--op-light-color);}
 .block_title{
 	display: flex;
 	align-items: center;
@@ -195,23 +188,22 @@ span{height: min-content;}
 }
 .manga-poster:hover > div{max-height: 100%;}
 /* Кнопочка до верху сторінки */
-#go-to-top{
+.page-button{
 	position: sticky;
-	padding: 5px 0;
+	padding: 8px 0;
 	bottom: 30px;
+	border-radius: 50%;
 	left: 90%;
-	width: 40px;
-	height: 40px;
-	margin-top: -20px;
+	width: 44px;
+	height: 44px;
+	margin-top: -22px;
 	margin-bottom: 10px;
 	background-color: var(--main-color);
-	-webkit-transform: rotate(90deg);
-	-moz-transform: rotate(90deg);
-	transform: rotate(90deg);
+	opacity: 0.6;
 	z-index: 99;
 }
-/* Список */
-.border-bottom{border-bottom: 2px solid var(--main-color);}
+.page-button:hover{opacity: 1;}
+#go-to-top{transform: rotate(90deg);}
 /* Пошук */
 .search{
 	display: flex;
@@ -240,25 +232,15 @@ span{height: min-content;}
 	align-items: center;
 }
 .drop-down:after{
-	content: '';
-	width: 0;
-	height: 0;
-	border-top: 7px solid var(--light-color);
-	border-right: 7px solid transparent;
-	border-left: 7px solid transparent;
-	margin-left: 7px;
-	margin-top: 6px;
-	-webkit-transition: 0.4s ease;
-	-moz-transition: 0.4s ease;
-	transition: 0.4s ease;
-	-webkit-transition-property: border-top, transform;
-	-moz-transition-property: border-top, transform;
-	transition-property: border-top, transform;
+	content: url(../ico/down-arrow.svg);
+	width: 15px;
+	height: 15px;
+	margin-left: 4px;
+	
 }
-.drop-down_checkbox:checked ~ label > .drop-down:after{
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
+.drop-down_checkbox:checked ~ .drop-down:after{
 	transform: rotate(180deg);
+	margin-top: 4px;
 }
 .drop-down_desktop-none:after{display: none;}
 /* Шапка */
@@ -288,8 +270,8 @@ span{height: min-content;}
 	grid-template-areas: 
 		"popular-manga popular-manga"
 		"new-chapters  new-manga";
-	grid-template-rows: 340px 1fr;
-	grid-template-columns: 1fr 239px;
+	grid-template-rows: auto auto;
+	grid-template-columns: auto auto;
 	gap: 20px;
 }
 #popular-manga{grid-area: popular-manga;}
@@ -302,16 +284,14 @@ span{height: min-content;}
 	overflow: hidden;
 	height: 295px;
 	padding-top: 10px;
+	gap: 12px;
 }
 #popular-manga_list a{
 	display: inline-block;
 	flex-shrink: 0;
 	width: 190px;
 	height: 285px;
-	margin: 0 6px;
 }
-#popular-manga_list a:first-child{margin-left: 0;}
-#popular-manga_list a:last-child{margin-right: 0;}
 /* Нові глави */
 .chapter-block{
 	display: grid;
@@ -328,6 +308,8 @@ span{height: min-content;}
 	height: 172px;
 	padding: 10px;
 }
+.chapter-block,
+.cb_title{border-bottom: 2px solid var(--main-color);}
 .chapter-block > div a{
 	text-align: start;
 	height: auto;
@@ -364,14 +346,17 @@ span{height: min-content;}
 }
 /* Нова манга */
 #new-manga_list{
+	display: flex;
+	flex-direction: column;
 	height: 1032px;
+	padding: 10px 0 12px;
 	overflow: hidden;
 	overflow-y: scroll;
+	gap: 10px;
 }
 #new-manga_list a{
-	margin-top: 10px;
-	width: 220px;
-	height: 331px;
+	width: 200px;
+	height: 300px;
 }
 /* Манга */
 #manga-page{padding: 25px;}
@@ -408,8 +393,8 @@ span{height: min-content;}
 #mp_img-buttons a{
 	display: flex;
 	align-items: center;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	opacity: 0.5;
 }
 #mp_img-buttons a:hover{
@@ -433,7 +418,7 @@ span{height: min-content;}
 	align-items: center;
 	grid-template-columns: 140px 1fr;
 	width: auto;
-	height: 40px;
+	min-height: 40px;
 	padding: 0 10px;
 	cursor: default;
 }
@@ -454,8 +439,7 @@ span{height: min-content;}
 	display: flex;
 	width: 100%;
 	height: 40px;
-	border-top: 1px solid var(--light-main-color);
-	border-bottom: 1px solid var(--light-main-color);
+	border: 1px solid var(--light-main-color);
 }
 #mp_buttons a{
 	flex: 1;
@@ -481,55 +465,46 @@ span{height: min-content;}
 	overflow: hidden;
 	overflow-y: scroll;
 }
-.mp_chapter{
+#mp_list > div{
 	display: grid;
 	width: 100%;
-	grid-template: "mp_chapter-title mp_chapter-team mp_chapter-date mp_chapter-edit";
 	grid-template-columns: auto min-content min-content min-content;
 	height: 40px;
 	border-bottom: 1px solid var(--light-main-color);
+	align-items: center;
 }
-.mp_chapter a,
-.mp_chapter div{
+#mp_list a{
 	width: 100%;
 	height: 40px;
 	display: flex;
 	align-items: center;
 	overflow: hidden;
 }
-.mp_chapter a{padding: 0 10px;}
-.mp_chapter a:hover{
+#mp_list a{padding: 0 10px;}
+#mp_list a:hover{
 	padding-top: 4px;
 	border-bottom: 4px solid var(--selection-color);
 	opacity: 1;
 }
-.mp_chapter span{
-	width: 100%;
-	text-align: start;
+#mp_list span{
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 }
-.mp_chapter-title{grid-area: mp_chapter-title;}
-.mp_chapter-team{
-	grid-area: mp_chapter-team;
-	max-width: 300px;
-}
-.mp_chapter-date{
-	grid-area: mp_chapter-date;
+#mp_list div > span{
 	font-size: 14px;
-	padding: 0 10px;
 	cursor: default;
 }
-.mp_chapter-edit{
-	grid-area: mp_chapter-edit;
-	margin: 4px 4px 0 0;
-	max-height: 31px;
-	width: 31px !important;
+.mpl_team{max-width: 300px;}
+.mpl_edit{
+	content: url(../ico/gear_dark.svg);
+	height: inherit;
+	width: 40px !important;
+	padding: 8px !important;
+	opacity: 0.8;
 }
-.mp_chapter-edit a{padding: 5px;}
-.mp_chapter-edit a:hover{
-	padding-top: 5px;
+.mpl_edit:hover{
+	padding-top: 8px;
 	border-bottom: 0 !important;
 }
 
@@ -629,6 +604,10 @@ span{height: min-content;}
 	min-height: 46px;
 	padding: 0 10px;
 }
+#reader_chapters-button:after{
+	width: 12px;
+	height: 12px;
+}
 #reader_chapters{
 	display: none;
 	top: 51px;
@@ -683,7 +662,6 @@ span{height: min-content;}
 #reader_img > img,
 #reader-scroll_img > img{
 	margin: 0 auto;
-	padding-bottom: 20px;
 	width: 810px;
 }
 #reader_img > img,
@@ -718,6 +696,10 @@ span{height: min-content;}
 			"rb_left rb_right";
 		grid-template-columns: 1fr 2fr;
 	}
+}
+#reader_switch-mod{
+	left: 10%;
+	transform: translateX(-44px);
 }
 #reader_footer{
 	display: grid;
@@ -805,20 +787,29 @@ span{height: min-content;}
 .mm-block{
 	margin-bottom: 20px;
 }
-.mm-block > div{
+.mm-block > select,
+.mm-block > input,
+.mm-block > textarea{
 	border: 1px solid var(--light-main-color);
 	margin-top: 5px;
 }
-.mm-block > div > *{
+.mm-block > *{
 	display: block;
 	width: 100%;
 	min-height: 30px;
 	font-size: 16px;
 }
+.mm_column{
+	display: flex;
+	gap: 10px;
+}
+.mm_column > div{flex-grow: 1;}
 .mm-block_genres{
 	padding: 10px;
 	display: flex;
 	flex-wrap: wrap;
+	border: 1px solid var(--light-main-color);
+	margin-top: 5px;
 }
 .mm-block_genres *{cursor: pointer;}
 .mm-block_genres label{
@@ -843,26 +834,20 @@ span{height: min-content;}
 	position: relative;
 	margin-right: 4px;
 	min-width: 16px;
+	max-width: 16px;
 	height: 16px;
+	padding: 1px;
 }
 .mm-block_genres input:checked{
 	background-color: var(--main-color);
-}
-.mm-block_genres input:checked:after{
-	content: '\2143';
-	font-weight: 900;
-	font-size: 14px;
-	position: absolute;
-	top: -3px;
-	left: 3.1px;
-	color: var(--light-color);
-	transform: rotate(45deg);
+	content: url(../ico/checked.svg);
 }
 #mm-block_textarea{
 	resize: vertical;
 	padding: 5px;
 	min-height: 88px !important;
 }
+#mm-block_file{border: 0;}
 #mm_buttons{
 	display: flex;
 	height: auto;
@@ -876,4 +861,22 @@ span{height: min-content;}
 	width: auto;
 	height: 40px;
 	padding: 0 15px;
+}
+
+@media (hover: none){
+	a:hover,
+	img:hover{opacity: 1;}
+	.button:hover,
+	.button:hover > a{background-color: var(--main-color);}
+	.manga-poster:hover > div{max-height: 50px;}
+	.search button:hover{opacity: 1;}
+	#reader_chapters a:hover,
+	.mp_description a:hover,
+	#mp_list a:hover{background-color: inherit;}
+	#mp_buttons a:hover,
+	.mp_chapter a:hover{
+		padding-top: 0;
+		border-bottom: 0;
+	}	
+	.page-button:hover{opacity: 0.6;}
 }
