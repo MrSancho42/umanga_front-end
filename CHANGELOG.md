@@ -1,3 +1,13 @@
+## [v1.3.1 2021-02-02]
+### New
+  - Ability to interact with manga and chapters
+  - Button for changing the reading mode
+
+### Fix
+  - Design of manga pages, readers, and manga modifications
+  - Header mobile version
+  - Optimized pages
+
 ## [v1.3.0 2021-01-16]
 ### New
   - Created a page for uploading chapters
