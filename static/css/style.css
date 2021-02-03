@@ -433,8 +433,6 @@ span{height: min-content;}
 	background-color: var(--page-color);
 	opacity: 1 !important;
 }
-#reader_chapters a:hover,
-#active-chapter{background-color: var(--light-main-color);}
 #mp_buttons{
 	display: flex;
 	width: 100%;
@@ -512,8 +510,7 @@ span{height: min-content;}
 /* Нова читалка */
 .reader_nav{
 	display: grid;
-	grid-template: "div div div";
-	grid-template-columns: 1fr 810px 1fr;
+	grid-template-columns: 1fr minmax(0, 810px) 1fr;
 	width: 100%;
 	height: 40px;
 	background-color: var(--selection-main);
@@ -525,36 +522,69 @@ span{height: min-content;}
 	height: inherit;
 }
 .reader_nav a{padding: 6px;}
-.reader_nav a:hover,
-.rn_chapter-button label:hover{
+.reader_nav a:hover{
 	background-color: var(--selection-color);
 	opacity: 1;
 }
-.rn_back{width: 60px;}
+.reader_nav > a:first-child{min-width: 60px;}
 .rn_center form{margin: auto 6px;}
 .rn_center div:first-child{transform: rotate(180deg);}
 .rn_center div{
 	display: grid;
-	grid-template: "a a";
 	grid-template-columns: 1fr 1fr;
 }
 .rn_chapter-button{
-	display: flex;
-	justify-content: flex-end;
-	color: var(--light-color);
+	justify-self: end;
+	background-color: transparent;
+	white-space: nowrap;
+	width: min-content;
+	padding: 0 20px;
 }
-.rn_chapter-button label{
-	padding: 0 10px;
-	height: inherit;
-	display: flex;
-	align-items: center;
-	cursor: pointer;
+.rn_chapter-button:after{
+	width: 12px;
+	height: 12px;
 }
-#rn_chapter-checkbox{display: none;}
-.rn_chapter {}
+.rn_chapter-checkbox{display: none;}
+.rn_chapter-checkbox:checked ~ .rn_chapter{display: block !important;}
+.rn_chapter{
+	display: none !important;
+	background-color: violet;
+	width: 300px;
+	height: auto !important;
+	max-height: 480px;
+	position: absolute;
+	right: 0;
+	top: 40px;
+	overflow: hidden;
+	overflow-y: scroll;
+	z-index: 1;
+}
+.rn_chapter a{
+	background-color: var(--light-color);
+	height: 32px;
+}
+.rn_active-chapter{
+	cursor: default;
+	background-color: var(--op-light-color);
+}
+.rn_active-chapter:hover{opacity: 1;}
+
 #reader_wrap{
 	width: 810px;
 	margin: 0 auto;
+}
+@media (max-width: 810px){
+	#reader_wrap{width: 100%;}
+	.rn_chapter-button{
+		font-size: 0;
+		padding: 8px;
+		width: 40px;
+	}
+	.rn_chapter-button:after{
+		position: absolute;
+		margin: 0 !important;
+		width: 24px;
+	}
 }
 #reader-book_buttons{
 	display: grid;
@@ -868,6 +898,7 @@ span{height: min-content;}
 	img:hover{opacity: 1;}
 	.button:hover,
 	.button:hover > a{background-color: var(--main-color);}
+	.rn_chapter-button:hover{background-color: transparent;}
 	.manga-poster:hover > div{max-height: 50px;}
 	.search button:hover{opacity: 1;}
 	#reader_chapters a:hover,

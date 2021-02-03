@@ -61,6 +61,7 @@ footer > div{width: 100%;}
 
 .page-button{left: 85%;}
 #reader_switch-mod{left: 15%;}
+
 @media (max-width: 550px){
 	#reader_menu{
 		display: grid;
