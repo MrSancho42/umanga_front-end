@@ -59,48 +59,23 @@ footer > div{width: 100%;}
 	#mp_title > span:not(:first-child){font-size: 14px;}
 }
 
+.rn_center div a:first-child,
+.rn_center form{display: none;}
+.rn_center div{grid-template-columns: auto;}
+.rn_chapter-button{width: 60px;}
+@media (max-width: 240px){
+	.reader_nav > a:first-child,
+	.rn_chapter-button{width: 40px;}
+}
+.rn_chapter{
+	max-height: calc(100vh - 91px);
+	height: auto;
+	min-width: 200px;
+	max-width: 300px;
+	width: 100%;
+}
 .page-button{left: 85%;}
 #reader_switch-mod{left: 15%;}
-
-@media (max-width: 550px){
-	#reader_menu{
-		display: grid;
-		width: 100%;
-		grid-template-areas:
-			"logo reader_back reader_menu-a"
-			"reader_chapters-button reader_chapters-button reader_chapters-button";
-		grid-template-columns: 40px auto auto;
-		grid-template-rows: auto auto;
-	}
-	#reader_menu > a{padding: 0 5px;}
-	#reader_chapters-button:after{margin-left: auto;}
-	#reader_chapters{
-		left: 0;
-		width: 100%;
-		position: absolute;
-		top: 51px;
-	}
-	#reader_footer{
-		width: 100%;
-		max-width: 550px;
-		grid-template-areas:
-			"rf_a-left rf_a-right"
-			"rf_form rf_form";
-		grid-template-columns: auto auto;
-		grid-template-rows: auto auto;
-	}
-	#reader_footer form{
-			max-width: 190px;
-			min-width: 190px;
-			margin: 0 auto;
-		}
-	#reader_footer > a{
-		min-width: 90px;
-		max-width: 265px;
-		width: 100%;
-	}
-	#reader_footer > a span{flex: 1;}
-}
 
 @media (max-width: 542px){#search-page{width: 350px;}}
 @media (max-width: 365px){

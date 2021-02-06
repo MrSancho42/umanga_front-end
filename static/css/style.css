@@ -78,8 +78,7 @@ img{
 	height: 100%;
 }
 input{padding-left: 5px;}
-header,
-footer{
+header{
 	width: 100%;
 	min-width: 200px;
 	background-color: var(--main-color);
@@ -92,13 +91,7 @@ header{
 	min-height: 51px;
 	border-bottom: 5px solid var(--selection-color);
 }
-footer{
-	margin-top: auto;
-	width: 100%;
-	background-color: var(--main-color);
-}
-header > div,
-footer > div{
+header > div{
 	align-items: center;
 	max-width: 1200px;
 	height: inherit;
@@ -196,11 +189,11 @@ span{height: min-content;}
 	left: 90%;
 	width: 44px;
 	height: 44px;
-	margin-top: -22px;
-	margin-bottom: 10px;
+	margin-top: -60px;
+	margin-bottom: 16px;
 	background-color: var(--main-color);
 	opacity: 0.6;
-	z-index: 99;
+	z-index: 2;
 }
 .page-button:hover{opacity: 1;}
 #go-to-top{transform: rotate(90deg);}
@@ -514,19 +507,22 @@ span{height: min-content;}
 	width: 100%;
 	height: 40px;
 	background-color: var(--selection-main);
+	min-width: 200px;
 }
 .reader_nav div,
 .reader_nav a{
 	display: flex;
+	background-color: inherit;
 	align-items: center;
 	height: inherit;
+	z-index: 4;
 }
 .reader_nav a{padding: 6px;}
 .reader_nav a:hover{
 	background-color: var(--selection-color);
 	opacity: 1;
 }
-.reader_nav > a:first-child{min-width: 60px;}
+.reader_nav > a:first-child{width: 60px;}
 .rn_center form{margin: auto 6px;}
 .rn_center div:first-child{transform: rotate(180deg);}
 .rn_center div{
@@ -535,10 +531,11 @@ span{height: min-content;}
 }
 .rn_chapter-button{
 	justify-self: end;
-	background-color: transparent;
+	background-color: inherit;
 	white-space: nowrap;
 	width: min-content;
 	padding: 0 20px;
+	z-index: 4;
 }
 .rn_chapter-button:after{
 	width: 12px;
@@ -548,7 +545,6 @@ span{height: min-content;}
 .rn_chapter-checkbox:checked ~ .rn_chapter{display: block !important;}
 .rn_chapter{
 	display: none !important;
-	background-color: violet;
 	width: 300px;
 	height: auto !important;
 	max-height: 480px;
@@ -557,7 +553,8 @@ span{height: min-content;}
 	top: 40px;
 	overflow: hidden;
 	overflow-y: scroll;
-	z-index: 1;
+	z-index: 3;
+	box-shadow: 0px 1px 5px 0px var(--op-main-color);
 }
 .rn_chapter a{
 	background-color: var(--light-color);
@@ -565,16 +562,24 @@ span{height: min-content;}
 }
 .rn_active-chapter{
 	cursor: default;
-	background-color: var(--op-light-color);
+	background-color: var(--light-main-color) !important;
 }
-.rn_active-chapter:hover{opacity: 1;}
-
+.reader_nav:last-of-type .rn_chapter-button:after{transform: rotate(180deg) translateY(-2px);}
+.reader_nav:last-of-type .drop-down_checkbox:checked ~ .drop-down:after{transform: rotate(0deg);}
+.reader_nav:last-of-type .rn_chapter{
+	top: unset;
+	bottom: 40px;
+	z-index: 2;
+}
 #reader_wrap{
 	width: 810px;
 	margin: 0 auto;
 }
 @media (max-width: 810px){
-	#reader_wrap{width: 100%;}
+	#reader_wrap{
+		width: 100%;
+		min-width: 200px;
+	}
 	.rn_chapter-button{
 		font-size: 0;
 		padding: 8px;
@@ -593,192 +598,16 @@ span{height: min-content;}
 	position: absolute;
 	top: 0;
 	width: 100%;
+	min-width: 200px;
 	height: 100%;
 }
 #reader-book_buttons a{cursor: default;}
 #reader-book_buttons a:first-child{grid-area: rbb_left;}
 #reader-book_buttons a:last-child{grid-area: rbb_right;}
-
-
-/* Читалка */
-#reader_header{
-	position: static;
-	min-width: 200px;
-	height: auto;
-}
-#reader_menu > a{
-	min-height: 46px;
-	padding: 0 10px;
-	overflow: hidden;
-	line-height: 16px;
-	width: auto;
-}
-#reader_menu #logo{
-	grid-area: logo;
-	width: 40px;
-	padding: 0;
-}
-#reader_menu > a:last-child{grid-area: reader_menu-a;}
-#reader_menu > div{grid-area: reader_chapters-button;}
-#reader_back{
-	grid-area: reader_back;
-	max-width: 500px;
-}
-#reader_back > span{
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-}
-#reader_chapters-checkbox:checked ~ #reader_chapters{display: block;}
-#reader_chapters-button{
-	min-height: 46px;
-	padding: 0 10px;
-}
-#reader_chapters-button:after{
-	width: 12px;
-	height: 12px;
-}
-#reader_chapters{
-	display: none;
-	top: 51px;
-	position: absolute;
-	background-color: var(--op-light-color);
-	width: 150px;
-	max-height: 252px;
-	overflow: hidden;
-	overflow-y: scroll;
-	z-index: 100;
-}
-#reader_chapters a{
-	text-align: left;
-	padding: 3px 5px;
-}
-#active-chapter{cursor: default;}
-#active-chapter:hover{opacity: 1;}
-#reader_page{
-	min-width: 200px;
-	width: 100%;
-	margin: 20px 0;
-	margin-bottom: auto;
-}
-#reader_buttons{
-	top: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	display: grid;
-	grid-template-areas: 
-		"rb_left rb_right rb_right";
-	grid-template-columns: 1fr 810px 1fr;
-	z-index: 2;
-}
-#reader_buttons a:first-child{grid-area: rb_left;}
-#reader_buttons a:last-child{grid-area: rb_right;}
-#reader_img{
-	display: flex;
-	margin: 0 auto;
-	max-width: 946px;
-	height: auto;
-	z-index: 1;
-}
-#reader-scroll_img{
-	display: flex;
-	flex-direction: column;
-	margin: 0 auto;
-	max-width: 810px;
-	height: auto;
-	z-index: 1;
-}
-#reader_img > img,
-#reader-scroll_img > img{
-	margin: 0 auto;
-	width: 810px;
-}
-#reader_img > img,
-#reader-scroll_img > img:last-child{padding-bottom: 0;}
-.reader_img-buttons{
-	height: inherit;
-	display: block;
-	width: 53px;
-	padding-top: 122px;
-	padding-bottom: 250px;
-}
-.reader_img-buttons img{
-	position: sticky;
-	height: 100px;
-	width: inherit;
-	top: 50%;
-	-webkit-transform: translate(0, -50%);
-	-moz-transform: translate(0, -50%);
-	transform: translate(0, -50%);
-}
-.reader_img-buttons:last-child img{
-	-webkit-transform: rotate(180deg) translate(0, 50%);
-	-moz-transform: rotate(180deg) translate(0, 50%);
-	transform: rotate(180deg) translate(0, 50%);
-}
-@media (max-width: 946px){
-	#reader_img > img,
-	#reader-scroll_img > img{width: 100%;}
-	.reader_img-buttons{display: none;}
-	#reader_buttons{
-		grid-template-areas: 
-			"rb_left rb_right";
-		grid-template-columns: 1fr 2fr;
-	}
-}
 #reader_switch-mod{
 	left: 10%;
 	transform: translateX(-44px);
 }
-#reader_footer{
-	display: grid;
-	grid-template-areas:
-		"rf_a-left  rf_form  rf_a-right";
-	grid-template-columns: minmax(160px, 278px) auto minmax(160px, 278px);
-	gap: 10px;
-	width: 586px;
-	padding: 20px 5px;
-	margin: 0 auto;
-	height: auto;
-}
-#reader_footer > *{
-	height: 38px;
-}
-#reader_footer form{
-	grid-area: rf_form;
-	max-width: 186px;
-	min-width: 186px;
-	margin: 0;
-}
-#reader_footer form > button{
-	width: 38px;
-	margin-left: -38px;
-}
-#reader_footer form > input{padding-right: 39px;}
-#reader_footer > a{
-	grid-area: rf_a-left;
-	display: flex;
-	align-items: center;
-	color: var(--light-color);
-	background-color: var(--selection-main);
-	width: 100%;
-	padding: 0 5px;
-}
-#reader_footer > a *{
-	margin: 0 5px;
-	height: 20px;
-	width: auto;
-}
-#reader_footer > a span{
-	flex: 1;
-	width: inherit;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-}
-#reader_footer > a:last-child{grid-area: rf_a-right;}
-#reader_footer > a:last-child img{transform: rotate(180deg);}
 /* Сторінка пошуку */
 #search-page{
 	display: flex;
@@ -898,7 +727,7 @@ span{height: min-content;}
 	img:hover{opacity: 1;}
 	.button:hover,
 	.button:hover > a{background-color: var(--main-color);}
-	.rn_chapter-button:hover{background-color: transparent;}
+	.rn_chapter-button:hover{background-color: inherit;}
 	.manga-poster:hover > div{max-height: 50px;}
 	.search button:hover{opacity: 1;}
 	#reader_chapters a:hover,
@@ -910,4 +739,5 @@ span{height: min-content;}
 		border-bottom: 0;
 	}	
 	.page-button:hover{opacity: 0.6;}
+	.reader_nav a:hover{background-color: inherit;}
 }
