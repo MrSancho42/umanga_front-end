@@ -740,4 +740,5 @@ span{height: min-content;}
 	}	
 	.page-button:hover{opacity: 0.6;}
 	.reader_nav a:hover{background-color: inherit;}
+	.rn_chapter a:hover{background-color: var(--light-color);}
 }

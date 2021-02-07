@@ -68,12 +68,13 @@ footer > div{width: 100%;}
 	.rn_chapter-button{width: 40px;}
 }
 .rn_chapter{
-	max-height: calc(100vh - 91px);
+	max-height: calc(100vh - 139px);
 	height: auto;
 	min-width: 200px;
 	max-width: 300px;
 	width: 100%;
 }
+.rn_chapter a{height: 40px;}
 .page-button{left: 85%;}
 #reader_switch-mod{left: 15%;}
 
