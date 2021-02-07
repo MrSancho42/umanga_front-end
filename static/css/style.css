@@ -526,6 +526,7 @@ span{height: min-content;}
 .rn_center form{margin: auto 6px;}
 .rn_center div:first-child{transform: rotate(180deg);}
 .rn_center div{
+	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
@@ -601,7 +602,6 @@ span{height: min-content;}
 	min-width: 200px;
 	height: 100%;
 }
-#reader-book_buttons a{cursor: default;}
 #reader-book_buttons a:first-child{grid-area: rbb_left;}
 #reader-book_buttons a:last-child{grid-area: rbb_right;}
 #reader_switch-mod{
