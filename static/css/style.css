@@ -59,6 +59,7 @@ body{
 	font: var(--main-font);
 	color: var(--main-color);
 	overflow-y: scroll;
+	min-width: 200px;
 }
 a{
 	display: inline-block;
@@ -189,8 +190,7 @@ span{height: min-content;}
 	left: 90%;
 	width: 44px;
 	height: 44px;
-	margin-top: -60px;
-	margin-bottom: 16px;
+	margin-top: -44px;
 	background-color: var(--main-color);
 	opacity: 0.6;
 	z-index: 2;
@@ -498,8 +498,6 @@ span{height: min-content;}
 	padding-top: 8px;
 	border-bottom: 0 !important;
 }
-
-
 /* Нова читалка */
 .reader_nav{
 	display: grid;
@@ -508,6 +506,7 @@ span{height: min-content;}
 	height: 40px;
 	background-color: var(--selection-main);
 	min-width: 200px;
+	z-index: 3;
 }
 .reader_nav div,
 .reader_nav a{
@@ -515,7 +514,6 @@ span{height: min-content;}
 	background-color: inherit;
 	align-items: center;
 	height: inherit;
-	z-index: 4;
 }
 .reader_nav a{padding: 6px;}
 .reader_nav a:hover{
@@ -536,22 +534,28 @@ span{height: min-content;}
 	white-space: nowrap;
 	width: min-content;
 	padding: 0 20px;
-	z-index: 4;
 }
 .rn_chapter-button:after{
 	width: 12px;
 	height: 12px;
 }
 .rn_chapter-checkbox{display: none;}
-.rn_chapter-checkbox:checked ~ .rn_chapter{display: block !important;}
+.rn_chapter-checkbox:checked ~ .rn_chapter{display: block;}
+#rncc1:checked ~ .rn_chapter{
+	top: 0px;
+	bottom: unset;
+}
+#rncc2:checked ~ .rn_chapter{
+	top: unset;
+	bottom: 0px;
+}
 .rn_chapter{
-	display: none !important;
+	display: none;
 	width: 300px;
-	height: auto !important;
+	height: auto;
 	max-height: 480px;
 	position: absolute;
 	right: 0;
-	top: 40px;
 	overflow: hidden;
 	overflow-y: scroll;
 	z-index: 3;
@@ -560,21 +564,19 @@ span{height: min-content;}
 .rn_chapter a{
 	background-color: var(--light-color);
 	height: 32px;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
 }
 .rn_active-chapter{
 	cursor: default;
 	background-color: var(--light-main-color) !important;
 }
 .reader_nav:last-of-type .rn_chapter-button:after{transform: rotate(180deg) translateY(-2px);}
-.reader_nav:last-of-type .drop-down_checkbox:checked ~ .drop-down:after{transform: rotate(0deg);}
-.reader_nav:last-of-type .rn_chapter{
-	top: unset;
-	bottom: 40px;
-	z-index: 2;
-}
 #reader_wrap{
 	width: 810px;
 	margin: 0 auto;
+	margin-bottom: -19.2px;
 }
 @media (max-width: 810px){
 	#reader_wrap{
