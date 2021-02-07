@@ -8,6 +8,10 @@ footer > div,
 	overflow-x: scroll;
 	width: 96vw;
 }
+#reader-book_buttons{
+	grid-template: "rbb_left  rbb_right";
+	grid-template-columns: 1fr 2fr;
+}
 @media (max-width: 768px){
 	#menu{
 		flex-direction: column;

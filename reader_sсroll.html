@@ -10,58 +10,153 @@
 		<title>UManga</title>
 	</head>
 	<body>
-		<header id="reader_header">
-				<div id="reader_menu">
-					<a href="" id="logo" name="header"><img src="./static/ico/logo.svg"></a>
-					<a href="" id="reader_back" class="button"><span>Воїн скелет не зміг захистити підземелля</span></a>
-					<div>
-						<input type="checkbox" id="reader_chapters-checkbox" class="drop-down_checkbox">
-						<label for="reader_chapters-checkbox" class="button drop-down" id="reader_chapters-button">
-							Глава 2
-						</label>
-						<div id="reader_chapters">
-							<a href="">Глава 1</a>
-							<a id="active-chapter">Глава 2</a>
-							<a href="">Глава 3</a>
-							<a href="">Глава 4</a>
-							<a href="">Глава 5</a>
-							<a href="">Глава 6</a>
-							<a href="">Глава 7</a>
-							<a href="">Глава 8</a>
-							<a href="">Глава 9</a>
-							<a href="">Глава 10</a>
-							<a href="">Глава 11</a>
-							<a href="">Глава 12</a>
-							<a href="">Глава 13</a>
-							<a href="">Глава 14</a>
-							<a href="">Глава 15</a>
-							<a href="">Глава 16</a>
-							<a href="">Глава 17</a>
-							<a href="">Глава 18</a>
-							<a href="">Глава 19</a>
-							<a href="">Глава 20</a>
-						</div>
-					</div>
-					<a href="" class="button">Читати книгою</a>
-				</div>
-		</header>
-		<div id="reader_page">
-			<div id="reader-scroll_img">
-				<img src="./static/img/3.jpg">
-				<img src="./static/img/3.jpg">
-				<img src="./static/img/3.jpg">
-				<img src="./static/img/3.jpg">
-			</div>
-			<a class="page-button" href="#header"><img id="go-to-top" src="./static/ico/arrow.svg"></a>
-			<a id="reader_switch-mod" class="page-button" href=""><img src="./static/ico/book.svg"></a>
-		</div>
-		<footer>
+		<header>
 			<div>
-				<div id="reader_footer">
-					<a href=""><img src="./static/ico/arrow.svg"><span>Попередня глава</span></a>
-					<a href=""><span>Наступна глава</span><img src="./static/ico/arrow.svg"></a>
+				<a href="" id="logo"><img src="./static/ico/logo.svg"></a>
+				<form class="search" id="search-m" method="post">
+					<input type="text" placeholder="Пошук...">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<input type="checkbox" id="menu-checkbox">
+				<label for="menu-checkbox" id="menu_button">
+					<div></div>
+				</label>
+				<nav id="menu">
+					<a href="" class="button">Каталог</a>
+					<a href="" class="button">Рейтинг манґи</a>
+					<a href="" class="button">Наші друзі</a>
+					<a href="" class="button">Рейтинг манги</a>
+					<a href="" class="button">Наші друзі</a>
+					<form class="search" id="search-d" method="post">
+						<input type="text" placeholder="Пошук...">
+						<button type="submit"><img src="./static/ico/lupa.svg"></button>
+					</form>
+					<a href="" class="button">Вхід</a>
+				</nav>
+			</div>
+		</header>
+		<a name="header"></a>
+		<div class="reader_nav">
+			<a href="">
+				<img src="./static/ico/back-arrow.svg" alt="">
+			</a>
+			<div class="rn_center">
+				<div>
+					<a href="">
+						<img src="./static/ico/arrow-angle.svg" alt="">
+					</a>
+					<a href="">
+						<img src="./static/ico/double-arrow.svg" alt="">
+					</a>
+				</div>
+				<form class="search" id="search-navigation" method="post">
+					<input type="text" placeholder="Сторінка 1 з 90">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<div>
+					<a href="">
+						<img src="./static/ico/arrow-angle.svg" alt="">
+					</a>
+					<a href="">
+						<img src="./static/ico/double-arrow.svg" alt="">
+					</a>
 				</div>
 			</div>
-		</footer>
+			<input type="checkbox" id="rncc1" class="drop-down_checkbox rn_chapter-checkbox">
+			<label for="rncc1" class="button drop-down rn_chapter-button">
+				Глава 1
+			</label>
+			<div class="rn_chapter">
+				<a href="">Глава 1</a>
+				<a class="rn_active-chapter">Глава 2</a>
+				<a href="">Глава 3</a>
+				<a href="">Глава 4</a>
+				<a href="">Глава 5</a>
+				<a href="">Глава 6</a>
+				<a href="">Глава 7</a>
+				<a href="">Глава 8</a>
+				<a href="">Глава 9</a>
+				<a href="">Глава 10</a>
+				<a href="">Глава 11</a>
+				<a href="">Глава 12</a>
+				<a href="">Глава 13</a>
+				<a href="">Глава 14</a>
+				<a href="">Глава 15</a>
+				<a href="">Глава 16</a>
+				<a href="">Глава 17</a>
+				<a href="">Глава 18</a>
+				<a href="">Глава 19</a>
+				<a href="">Глава 20</a>
+			</div>
+		</div>
+		<div id="reader_wrap">
+			<img src="./static/img/3.jpg">
+			<img src="./static/img/3.jpg">
+			<img src="./static/img/3.jpg">
+			<img src="./static/img/3.jpg">
+			<img src="./static/img/3.jpg">
+			<img src="./static/img/3.jpg">
+			<img src="./static/img/3.jpg">
+			<img src="./static/img/3.jpg">
+		</div>
+		<a class="page-button" href="#header">
+			<img id="go-to-top" src="./static/ico/arrow.svg">
+		</a>
+		<a id="reader_switch-mod" class="page-button" href="">
+			<img src="./static/ico/book.svg">
+		</a>
+		<div class="reader_nav">
+			<a href="">
+				<img src="./static/ico/back-arrow.svg" alt="">
+			</a>
+			<div class="rn_center">
+				<div>
+					<a href="">
+						<img src="./static/ico/arrow-angle.svg" alt="">
+					</a>
+					<a href="">
+						<img src="./static/ico/double-arrow.svg" alt="">
+					</a>
+				</div>
+				<form class="search" id="search-navigation" method="post">
+					<input type="text" placeholder="Сторінка 1 з 90">
+					<button type="submit"><img src="./static/ico/lupa.svg"></button>
+				</form>
+				<div>
+					<a href="">
+						<img src="./static/ico/arrow-angle.svg" alt="">
+					</a>
+					<a href="">
+						<img src="./static/ico/double-arrow.svg" alt="">
+					</a>
+				</div>
+			</div>
+			<input type="checkbox" id="rncc2" class="drop-down_checkbox rn_chapter-checkbox">
+			<label for="rncc2" class="button drop-down rn_chapter-button">
+				Глава 1
+			</label>
+			<div class="rn_chapter">
+				<a href="">Глава 1</a>
+				<a class="rn_active-chapter">Глава 2</a>
+				<a href="">Глава 3</a>
+				<a href="">Глава 4</a>
+				<a href="">Глава 5</a>
+				<a href="">Глава 6</a>
+				<a href="">Глава 7</a>
+				<a href="">Глава 8</a>
+				<a href="">Глава 9</a>
+				<a href="">Глава 10</a>
+				<a href="">Глава 11</a>
+				<a href="">Глава 12</a>
+				<a href="">Глава 13</a>
+				<a href="">Глава 14</a>
+				<a href="">Глава 15</a>
+				<a href="">Глава 16</a>
+				<a href="">Глава 17</a>
+				<a href="">Глава 18</a>
+				<a href="">Глава 19</a>
+				<a href="">Глава 20</a>
+			</div>
+		</div>
 	</body>
 </html>
